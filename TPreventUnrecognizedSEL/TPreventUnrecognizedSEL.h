@@ -17,3 +17,6 @@ FOUNDATION_EXPORT const unsigned char TPreventUnrecognizedSELVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <TPreventUnrecognizedSEL/PublicHeader.h>
 
 
+#import "TUndertakeObject.h"
+#import "NSObject+TPrevent.h"
+
