@@ -65,7 +65,7 @@
 		3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUndertakeObject.m; sourceTree = "<group>"; };
 		3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPUSELFastForwarding.h"; sourceTree = "<group>"; };
 		3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPUSELFastForwarding.m"; sourceTree = "<group>"; };
-		3FF146591FC870C70023D67B /* Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Example; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF146591FC870C70023D67B /* TPUSELFastForwarding Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TPUSELFastForwarding Example"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF1465B1FC870C70023D67B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +127,7 @@
 				3F5DEBC01FC85625004254F7 /* TPUSELFastForwarding.framework */,
 				3F5DEBDA1FC85662004254F7 /* TPUSELFastForwarding.framework */,
 				3F5DEBE71FC8568A004254F7 /* TPUSELFastForwarding.framework */,
-				3FF146591FC870C70023D67B /* Example */,
+				3FF146591FC870C70023D67B /* TPUSELFastForwarding Example */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,9 +286,9 @@
 			productReference = 3FDC631E1FC7DD2100524907 /* TPUSELFastForwarding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3FF146581FC870C70023D67B /* Example */ = {
+		3FF146581FC870C70023D67B /* TPUSELFastForwarding Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FF1465D1FC870C70023D67B /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 3FF1465D1FC870C70023D67B /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding Example" */;
 			buildPhases = (
 				3FF146551FC870C70023D67B /* Sources */,
 				3FF146561FC870C70023D67B /* Frameworks */,
@@ -299,9 +299,9 @@
 			dependencies = (
 				3FF146631FC8716C0023D67B /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = "TPUSELFastForwarding Example";
 			productName = Example;
-			productReference = 3FF146591FC870C70023D67B /* Example */;
+			productReference = 3FF146591FC870C70023D67B /* TPUSELFastForwarding Example */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -349,10 +349,10 @@
 			projectRoot = "";
 			targets = (
 				3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding iOS */,
-				3F5DEBBF1FC85625004254F7 /* TPUSELFastForwarding watchOS */,
 				3F5DEBD91FC85662004254F7 /* TPUSELFastForwarding tvOS */,
 				3F5DEBE61FC8568A004254F7 /* TPUSELFastForwarding macOS */,
-				3FF146581FC870C70023D67B /* Example */,
+				3F5DEBBF1FC85625004254F7 /* TPUSELFastForwarding watchOS */,
+				3FF146581FC870C70023D67B /* TPUSELFastForwarding Example */,
 			);
 		};
 /* End PBXProject section */
@@ -802,7 +802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FF1465D1FC870C70023D67B /* Build configuration list for PBXNativeTarget "Example" */ = {
+		3FF1465D1FC870C70023D67B /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FF1465E1FC870C70023D67B /* Debug */,
