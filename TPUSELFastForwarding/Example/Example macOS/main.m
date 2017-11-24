@@ -10,6 +10,7 @@
 #import <TPUSELFastForwarding/TPUSELFastForwarding.h>
 
 int main(int argc, const char * argv[]) {
+    
     [NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
         NSString *typeStr = @"ClassMethod\t";
         if (methodType == UnrecognizedMethodTypeInstanceMethod) {
