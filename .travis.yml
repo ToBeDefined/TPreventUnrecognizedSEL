@@ -1,0 +1,43 @@
+language: objective-c
+osx_image: xcode9
+
+env:
+  global:
+    - WORKSPACE="TPreventUnrecognizedSEL.xcworkspace"
+    - FRAMEWORK_SCHEME_F="TPUSELFastForwarding"
+    - FRAMEWORK_SCHEME_N="TPUSELNormalForwarding"
+
+  matrix:
+
+    # Fast Forwarding
+    - DESTINATION="OS=8.1,name=iPhone 4S"           SCHEME="${FRAMEWORK_SCHEME_F} iOS"      EXAMPLE_NAME=""                               BUILD_EXAMPLE="NO"    POD_LINT="NO"
+    - DESTINATION="OS=9.0,name=Apple TV 1080p"      SCHEME="${FRAMEWORK_SCHEME_F} tvOS"     EXAMPLE_NAME=""                               BUILD_EXAMPLE="NO"    POD_LINT="NO"
+    - DESTINATION="arch=x86_64"                     SCHEME="${FRAMEWORK_SCHEME_F} macOS"    EXAMPLE_NAME="${FRAMEWORK_SCHEME_F} Example"  BUILD_EXAMPLE="YES"   POD_LINT="NO"
+    - DESTINATION="OS=2.0,name=Apple Watch - 42mm"  SCHEME="${FRAMEWORK_SCHEME_F} watchOS"  EXAMPLE_NAME=""                               BUILD_EXAMPLE="NO"    POD_LINT="YES"
+
+    # Normal Forwarding
+    - DESTINATION="OS=11.0,name=iPhone X"           SCHEME="${FRAMEWORK_SCHEME_N} iOS"      EXAMPLE_NAME=""                               BUILD_EXAMPLE="NO"    POD_LINT="NO"
+    - DESTINATION="OS=10.2,name=Apple TV 1080p"     SCHEME="${FRAMEWORK_SCHEME_N} tvOS"     EXAMPLE_NAME=""                               BUILD_EXAMPLE="NO"    POD_LINT="NO"
+    - DESTINATION="arch=x86_64"                     SCHEME="${FRAMEWORK_SCHEME_N} macOS"    EXAMPLE_NAME="${FRAMEWORK_SCHEME_N} Example"  BUILD_EXAMPLE="YES"   POD_LINT="NO"
+    - DESTINATION="OS=4.0,name=Apple Watch - 42mm"  SCHEME="${FRAMEWORK_SCHEME_N} watchOS"  EXAMPLE_NAME=""                               BUILD_EXAMPLE="NO"    POD_LINT="YES"
+
+script:
+    - env
+    - xcodebuild -version
+    - xcodebuild -showsdks
+    - xcpretty --version
+
+    # Build Framework in Debug and Run Tests if specified
+    - xcodebuild clean build -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" | xcpretty
+
+    # Build Example in Debug if specified
+    - if [ $BUILD_EXAMPLE == "YES" ]; then
+        xcodebuild clean build -workspace "$WORKSPACE" -scheme "${EXAMPLE_NAME}" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty;
+      fi
+
+    # Run `pod lib lint` if specified
+    - if [ $POD_LINT == "YES" ]; then
+        pod lib lint;
+      fi
+
+    
