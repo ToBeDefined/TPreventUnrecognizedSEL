@@ -50,6 +50,7 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
     if (handleBlock != nil) {
         handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod);
     }
+    
     return [TUndertakeObject sharedInstance];
 }
 
@@ -64,10 +65,12 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
                         (IMP)__c_t_resolveLostedMethod,
                         "v@:");
     }
+    
     HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
     if (handleBlock != nil) {
         handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod);
     }
+    
     return [TUndertakeObject class];
 }
 
