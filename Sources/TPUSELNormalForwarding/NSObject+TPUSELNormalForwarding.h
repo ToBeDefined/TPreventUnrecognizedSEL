@@ -1,8 +1,8 @@
 //
-//  NSObject+TPrevent.h
-//  TPreventUnrecognizedSEL
+//  NSObject+TPUSELNormalForwarding.h
+//  TPUSELFastForwarding
 //
-//  Created by TBD on 2017/11/23.
+//  Created by 邵伟男 on 2017/11/24.
 //  Copyright © 2017年 TBD. All rights reserved.
 //
 
@@ -17,9 +17,7 @@ typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
 
 typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selector, UnrecognizedMethodType methodType);
 
-@interface NSObject (TPrevent)
-
-+ (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
+@interface NSObject (TPUSELNormalForwarding)
 
 @end
 

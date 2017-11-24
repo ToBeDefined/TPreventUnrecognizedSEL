@@ -7,90 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FE8C35C1FC7181100BB049B /* TPreventUnrecognizedSEL.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE8C35A1FC7181100BB049B /* TPreventUnrecognizedSEL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE8C3651FC7195000BB049B /* NSObject+TPrevent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE8C3631FC7195000BB049B /* NSObject+TPrevent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE8C3661FC7195000BB049B /* NSObject+TPrevent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8C3641FC7195000BB049B /* NSObject+TPrevent.m */; };
-		3FE8C36D1FC71AC100BB049B /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE8C36B1FC71AC100BB049B /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FE8C36E1FC71AC100BB049B /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8C36C1FC71AC100BB049B /* TUndertakeObject.m */; };
-		3FE8C3771FC71C3800BB049B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8C3761FC71C3800BB049B /* AppDelegate.m */; };
-		3FE8C37A1FC71C3800BB049B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8C3791FC71C3800BB049B /* ViewController.m */; };
-		3FE8C37D1FC71C3800BB049B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8C37B1FC71C3800BB049B /* Main.storyboard */; };
-		3FE8C37F1FC71C3800BB049B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8C37E1FC71C3800BB049B /* Assets.xcassets */; };
-		3FE8C3821FC71C3800BB049B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE8C3801FC71C3800BB049B /* LaunchScreen.storyboard */; };
-		3FE8C3851FC71C3800BB049B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8C3841FC71C3800BB049B /* main.m */; };
-		3FE8C38C1FC71C6300BB049B /* TPreventUnrecognizedSEL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE8C3571FC7181000BB049B /* TPreventUnrecognizedSEL.framework */; };
-		3FE8C38E1FC71C9A00BB049B /* TPreventUnrecognizedSEL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE8C3571FC7181000BB049B /* TPreventUnrecognizedSEL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F3F01C31FC7D8E7003C7181 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F3F01BE1FC7D8E7003C7181 /* TPUSELFastForwarding.h */; };
+		3F3F01C51FC7D8E7003C7181 /* TPUSELNormalForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F3F01C11FC7D8E7003C7181 /* TPUSELNormalForwarding.h */; };
+		3F3F01C61FC7D8F0003C7181 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8C36C1FC71AC100BB049B /* TUndertakeObject.m */; };
+		3FDC630D1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC630B1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.h */; };
+		3FDC630E1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC630C1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.m */; };
+		3FDC63111FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC630F1FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.h */; };
+		3FDC63131FC7DA0800524907 /* NSObject+TPUSELNormalForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63101FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3FE8C3921FC71D4500BB049B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3FE8C34E1FC7181000BB049B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3FE8C3561FC7181000BB049B;
-			remoteInfo = TPreventUnrecognizedSEL;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3FE8C38F1FC71C9A00BB049B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3FE8C38E1FC71C9A00BB049B /* TPreventUnrecognizedSEL.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3FE8C3571FC7181000BB049B /* TPreventUnrecognizedSEL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPreventUnrecognizedSEL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FE8C35A1FC7181100BB049B /* TPreventUnrecognizedSEL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPreventUnrecognizedSEL.h; sourceTree = "<group>"; };
+		3F047BAD1FC7CE9E00EBFEDA /* TPUSELNormalForwarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPUSELNormalForwarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F047BBE1FC7CEB500EBFEDA /* TPUSELFastForwarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPUSELFastForwarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3F01BE1FC7D8E7003C7181 /* TPUSELFastForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPUSELFastForwarding.h; sourceTree = "<group>"; };
+		3F3F01C11FC7D8E7003C7181 /* TPUSELNormalForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPUSELNormalForwarding.h; sourceTree = "<group>"; };
+		3FDC630B1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPUSELFastForwarding.h"; sourceTree = "<group>"; };
+		3FDC630C1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPUSELFastForwarding.m"; sourceTree = "<group>"; };
+		3FDC630F1FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPUSELNormalForwarding.h"; sourceTree = "<group>"; };
+		3FDC63101FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPUSELNormalForwarding.m"; sourceTree = "<group>"; };
 		3FE8C35B1FC7181100BB049B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FE8C3631FC7195000BB049B /* NSObject+TPrevent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPrevent.h"; sourceTree = "<group>"; };
 		3FE8C3641FC7195000BB049B /* NSObject+TPrevent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPrevent.m"; sourceTree = "<group>"; };
 		3FE8C36B1FC71AC100BB049B /* TUndertakeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUndertakeObject.h; sourceTree = "<group>"; };
 		3FE8C36C1FC71AC100BB049B /* TUndertakeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TUndertakeObject.m; sourceTree = "<group>"; };
-		3FE8C3731FC71C3800BB049B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FE8C3751FC71C3800BB049B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3FE8C3761FC71C3800BB049B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3FE8C3781FC71C3800BB049B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3FE8C3791FC71C3800BB049B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3FE8C37C1FC71C3800BB049B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3FE8C37E1FC71C3800BB049B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FE8C3811FC71C3800BB049B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3FE8C3831FC71C3800BB049B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FE8C3841FC71C3800BB049B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3FE8C3531FC7181000BB049B /* Frameworks */ = {
+		3F047BA91FC7CE9E00EBFEDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FE8C3701FC71C3800BB049B /* Frameworks */ = {
+		3F047BBA1FC7CEB500EBFEDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8C38C1FC71C6300BB049B /* TPreventUnrecognizedSEL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F3F01BC1FC7D8E7003C7181 /* TPUSELFastForwarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F3F01BE1FC7D8E7003C7181 /* TPUSELFastForwarding.h */,
+				3FE8C36B1FC71AC100BB049B /* TUndertakeObject.h */,
+				3FE8C36C1FC71AC100BB049B /* TUndertakeObject.m */,
+				3FDC630B1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.h */,
+				3FDC630C1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.m */,
+			);
+			path = TPUSELFastForwarding;
+			sourceTree = "<group>";
+		};
+		3F3F01BF1FC7D8E7003C7181 /* TPUSELNormalForwarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F3F01C11FC7D8E7003C7181 /* TPUSELNormalForwarding.h */,
+				3FDC630F1FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.h */,
+				3FDC63101FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.m */,
+			);
+			path = TPUSELNormalForwarding;
+			sourceTree = "<group>";
+		};
 		3FE8C34D1FC7181000BB049B = {
 			isa = PBXGroup;
 			children = (
 				3FE8C3621FC718C800BB049B /* Sources */,
 				3FE8C3591FC7181000BB049B /* TPreventUnrecognizedSEL */,
-				3FE8C3741FC71C3800BB049B /* Example */,
 				3FE8C3581FC7181000BB049B /* Products */,
 				3FE8C38B1FC71C6300BB049B /* Frameworks */,
 			);
@@ -99,8 +85,8 @@
 		3FE8C3581FC7181000BB049B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FE8C3571FC7181000BB049B /* TPreventUnrecognizedSEL.framework */,
-				3FE8C3731FC71C3800BB049B /* Example.app */,
+				3F047BAD1FC7CE9E00EBFEDA /* TPUSELNormalForwarding.framework */,
+				3F047BBE1FC7CEB500EBFEDA /* TPUSELFastForwarding.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +94,6 @@
 		3FE8C3591FC7181000BB049B /* TPreventUnrecognizedSEL */ = {
 			isa = PBXGroup;
 			children = (
-				3FE8C35A1FC7181100BB049B /* TPreventUnrecognizedSEL.h */,
 				3FE8C35B1FC7181100BB049B /* Info.plist */,
 			);
 			path = TPreventUnrecognizedSEL;
@@ -119,26 +104,10 @@
 			children = (
 				3FE8C3631FC7195000BB049B /* NSObject+TPrevent.h */,
 				3FE8C3641FC7195000BB049B /* NSObject+TPrevent.m */,
-				3FE8C36B1FC71AC100BB049B /* TUndertakeObject.h */,
-				3FE8C36C1FC71AC100BB049B /* TUndertakeObject.m */,
+				3F3F01BC1FC7D8E7003C7181 /* TPUSELFastForwarding */,
+				3F3F01BF1FC7D8E7003C7181 /* TPUSELNormalForwarding */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		3FE8C3741FC71C3800BB049B /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				3FE8C3751FC71C3800BB049B /* AppDelegate.h */,
-				3FE8C3761FC71C3800BB049B /* AppDelegate.m */,
-				3FE8C3781FC71C3800BB049B /* ViewController.h */,
-				3FE8C3791FC71C3800BB049B /* ViewController.m */,
-				3FE8C37B1FC71C3800BB049B /* Main.storyboard */,
-				3FE8C37E1FC71C3800BB049B /* Assets.xcassets */,
-				3FE8C3801FC71C3800BB049B /* LaunchScreen.storyboard */,
-				3FE8C3831FC71C3800BB049B /* Info.plist */,
-				3FE8C3841FC71C3800BB049B /* main.m */,
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 		3FE8C38B1FC71C6300BB049B /* Frameworks */ = {
@@ -151,55 +120,62 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3FE8C3541FC7181000BB049B /* Headers */ = {
+		3F047BAA1FC7CE9E00EBFEDA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8C36D1FC71AC100BB049B /* TUndertakeObject.h in Headers */,
-				3FE8C3651FC7195000BB049B /* NSObject+TPrevent.h in Headers */,
-				3FE8C35C1FC7181100BB049B /* TPreventUnrecognizedSEL.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F047BBB1FC7CEB500EBFEDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3F01C31FC7D8E7003C7181 /* TPUSELFastForwarding.h in Headers */,
+				3FDC63111FC7D9F100524907 /* NSObject+TPUSELNormalForwarding.h in Headers */,
+				3FDC630D1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.h in Headers */,
+				3F3F01C51FC7D8E7003C7181 /* TPUSELNormalForwarding.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3FE8C3561FC7181000BB049B /* TPreventUnrecognizedSEL */ = {
+		3F047BAC1FC7CE9E00EBFEDA /* TPUSELNormalForwarding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FE8C35F1FC7181100BB049B /* Build configuration list for PBXNativeTarget "TPreventUnrecognizedSEL" */;
+			buildConfigurationList = 3F047BB61FC7CE9E00EBFEDA /* Build configuration list for PBXNativeTarget "TPUSELNormalForwarding" */;
 			buildPhases = (
-				3FE8C3521FC7181000BB049B /* Sources */,
-				3FE8C3531FC7181000BB049B /* Frameworks */,
-				3FE8C3541FC7181000BB049B /* Headers */,
-				3FE8C3551FC7181000BB049B /* Resources */,
+				3F047BA81FC7CE9E00EBFEDA /* Sources */,
+				3F047BA91FC7CE9E00EBFEDA /* Frameworks */,
+				3F047BAA1FC7CE9E00EBFEDA /* Headers */,
+				3F047BAB1FC7CE9E00EBFEDA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TPreventUnrecognizedSEL;
-			productName = TPreventUnrecognizedSEL;
-			productReference = 3FE8C3571FC7181000BB049B /* TPreventUnrecognizedSEL.framework */;
+			name = TPUSELNormalForwarding;
+			productName = TPUSELNormalForwarding;
+			productReference = 3F047BAD1FC7CE9E00EBFEDA /* TPUSELNormalForwarding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3FE8C3721FC71C3800BB049B /* Example */ = {
+		3F047BBD1FC7CEB500EBFEDA /* TPUSELFastForwarding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FE8C3861FC71C3800BB049B /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 3F047BC71FC7CEB600EBFEDA /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding" */;
 			buildPhases = (
-				3FE8C36F1FC71C3800BB049B /* Sources */,
-				3FE8C3701FC71C3800BB049B /* Frameworks */,
-				3FE8C3711FC71C3800BB049B /* Resources */,
-				3FE8C38F1FC71C9A00BB049B /* Embed Frameworks */,
+				3F047BB91FC7CEB500EBFEDA /* Sources */,
+				3F047BBA1FC7CEB500EBFEDA /* Frameworks */,
+				3F047BBB1FC7CEB500EBFEDA /* Headers */,
+				3F047BBC1FC7CEB500EBFEDA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3FE8C3931FC71D4500BB049B /* PBXTargetDependency */,
 			);
-			name = Example;
-			productName = Example;
-			productReference = 3FE8C3731FC71C3800BB049B /* Example.app */;
-			productType = "com.apple.product-type.application";
+			name = TPUSELFastForwarding;
+			productName = TPUSELFastForwarding;
+			productReference = 3F047BBE1FC7CEB500EBFEDA /* TPUSELFastForwarding.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -210,11 +186,11 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = TBD;
 				TargetAttributes = {
-					3FE8C3561FC7181000BB049B = {
+					3F047BAC1FC7CE9E00EBFEDA = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
-					3FE8C3721FC71C3800BB049B = {
+					3F047BBD1FC7CEB500EBFEDA = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -233,82 +209,130 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FE8C3561FC7181000BB049B /* TPreventUnrecognizedSEL */,
-				3FE8C3721FC71C3800BB049B /* Example */,
+				3F047BBD1FC7CEB500EBFEDA /* TPUSELFastForwarding */,
+				3F047BAC1FC7CE9E00EBFEDA /* TPUSELNormalForwarding */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3FE8C3551FC7181000BB049B /* Resources */ = {
+		3F047BAB1FC7CE9E00EBFEDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FE8C3711FC71C3800BB049B /* Resources */ = {
+		3F047BBC1FC7CEB500EBFEDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8C3821FC71C3800BB049B /* LaunchScreen.storyboard in Resources */,
-				3FE8C37F1FC71C3800BB049B /* Assets.xcassets in Resources */,
-				3FE8C37D1FC71C3800BB049B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3FE8C3521FC7181000BB049B /* Sources */ = {
+		3F047BA81FC7CE9E00EBFEDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8C3661FC7195000BB049B /* NSObject+TPrevent.m in Sources */,
-				3FE8C36E1FC71AC100BB049B /* TUndertakeObject.m in Sources */,
+				3FDC63131FC7DA0800524907 /* NSObject+TPUSELNormalForwarding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FE8C36F1FC71C3800BB049B /* Sources */ = {
+		3F047BB91FC7CEB500EBFEDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8C37A1FC71C3800BB049B /* ViewController.m in Sources */,
-				3FE8C3851FC71C3800BB049B /* main.m in Sources */,
-				3FE8C3771FC71C3800BB049B /* AppDelegate.m in Sources */,
+				3F3F01C61FC7D8F0003C7181 /* TUndertakeObject.m in Sources */,
+				3FDC630E1FC7D9DF00524907 /* NSObject+TPUSELFastForwarding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		3FE8C3931FC71D4500BB049B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3FE8C3561FC7181000BB049B /* TPreventUnrecognizedSEL */;
-			targetProxy = 3FE8C3921FC71D4500BB049B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3FE8C37B1FC71C3800BB049B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FE8C37C1FC71C3800BB049B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3FE8C3801FC71C3800BB049B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FE8C3811FC71C3800BB049B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		3F047BB71FC7CE9E00EBFEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPreventUnrecognizedSEL/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinganwanjia.TPUSELNormalForwarding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F047BB81FC7CE9E00EBFEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPreventUnrecognizedSEL/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinganwanjia.TPUSELNormalForwarding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F047BC81FC7CEB600EBFEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPreventUnrecognizedSEL/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinganwanjia.TPUSELFastForwarding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F047BC91FC7CEB600EBFEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPreventUnrecognizedSEL/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pinganwanjia.TPUSELFastForwarding;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3FE8C35D1FC7181100BB049B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -419,100 +443,32 @@
 			};
 			name = Release;
 		};
-		3FE8C3601FC7181100BB049B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = TS9WTSBK78;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TPreventUnrecognizedSEL/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tbd.tech.TPreventUnrecognizedSEL;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3FE8C3611FC7181100BB049B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = TS9WTSBK78;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TPreventUnrecognizedSEL/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tbd.tech.TPreventUnrecognizedSEL;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3FE8C3871FC71C3800BB049B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TS9WTSBK78;
-				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tbd.tech.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3FE8C3881FC71C3800BB049B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TS9WTSBK78;
-				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tbd.tech.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3F047BB61FC7CE9E00EBFEDA /* Build configuration list for PBXNativeTarget "TPUSELNormalForwarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F047BB71FC7CE9E00EBFEDA /* Debug */,
+				3F047BB81FC7CE9E00EBFEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F047BC71FC7CEB600EBFEDA /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F047BC81FC7CEB600EBFEDA /* Debug */,
+				3F047BC91FC7CEB600EBFEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3FE8C3511FC7181000BB049B /* Build configuration list for PBXProject "TPreventUnrecognizedSEL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FE8C35D1FC7181100BB049B /* Debug */,
 				3FE8C35E1FC7181100BB049B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3FE8C35F1FC7181100BB049B /* Build configuration list for PBXNativeTarget "TPreventUnrecognizedSEL" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3FE8C3601FC7181100BB049B /* Debug */,
-				3FE8C3611FC7181100BB049B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3FE8C3861FC71C3800BB049B /* Build configuration list for PBXNativeTarget "Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3FE8C3871FC71C3800BB049B /* Debug */,
-				3FE8C3881FC71C3800BB049B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
