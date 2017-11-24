@@ -19,6 +19,8 @@ typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selec
 
 @interface NSObject (TPUSELNormalForwarding)
 
++ (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

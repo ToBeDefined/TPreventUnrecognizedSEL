@@ -15,6 +15,7 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 @implementation NSObject (TPUSELFastForwarding)
 
 #pragma mark - HandleUnrecognizedSELErrorBlock
+
 + (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock {
     objc_setAssociatedObject(self, @selector(handleUnrecognizedSELErrorBlock), handleBlock, OBJC_ASSOCIATION_RETAIN);
 }
@@ -34,10 +35,17 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 }
 
 - (id)__t_forwardingTargetForSelector:(SEL)aSelector {
-    class_addMethod([TUndertakeObject class],
-                    aSelector,
-                    (IMP)__c_t_resolveLostedMethod,
-                    "v@:");
+    if ([self respondsToSelector:aSelector]) {
+        return self;
+    }
+    
+    if (![[TUndertakeObject sharedInstance] respondsToSelector:aSelector]) {
+        class_addMethod([TUndertakeObject class],
+                        aSelector,
+                        (IMP)__c_t_resolveLostedMethod,
+                        "v@:");
+    }
+    
     HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
     if (handleBlock != nil) {
         handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod);
@@ -46,10 +54,16 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 }
 
 + (id)__t_forwardingTargetForSelector:(SEL)aSelector {
-    class_addMethod(objc_getMetaClass(class_getName([TUndertakeObject class])),
-                    aSelector,
-                    (IMP)__c_t_resolveLostedMethod,
-                    "v@:");
+    if ([self respondsToSelector:aSelector]) {
+        return self;
+    }
+    
+    if (![TUndertakeObject respondsToSelector:aSelector]) {
+        class_addMethod(objc_getMetaClass(class_getName([TUndertakeObject class])),
+                        aSelector,
+                        (IMP)__c_t_resolveLostedMethod,
+                        "v@:");
+    }
     HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
     if (handleBlock != nil) {
         handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod);
