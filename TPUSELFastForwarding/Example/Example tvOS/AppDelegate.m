@@ -1,14 +1,12 @@
 //
 //  AppDelegate.m
-//  Example
+//  Example tvOS
 //
-//  Created by 邵伟男 on 2017/11/24.
+//  Created by TBD on 2017/11/24.
 //  Copyright © 2017年 邵伟男. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import <TPUSELFastForwarding/TPUSELFastForwarding.h>
 
 @interface AppDelegate ()
 
@@ -18,22 +16,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
-        NSString *typeStr = @"ClassMethod\t";
-        if (methodType == UnrecognizedMethodTypeInstanceMethod) {
-            typeStr = @"InstanceMethod";
-        }
-        NSLog(@"%@ \t ==> %@ ==> %@", typeStr, NSStringFromClass(cls), NSStringFromSelector(selector));
-    }];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 

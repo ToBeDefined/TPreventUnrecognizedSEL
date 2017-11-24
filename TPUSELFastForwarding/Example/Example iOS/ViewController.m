@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self performSelector:@selector(losted:Instance:Method:inVC:)];
-    [[self class] performSelector:@selector(losted:Class:MethodInVCClass:)];
+    [self performSelector:@selector(iOS:losted:instance:method:inVC:)];
+    [[self class] performSelector:@selector(iOS:losted:class:method:inVCClass:)];
 }
 
 

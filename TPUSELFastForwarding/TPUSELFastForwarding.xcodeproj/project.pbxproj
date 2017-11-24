@@ -7,6 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5DEC511FC858FE004254F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC501FC858FE004254F7 /* AppDelegate.m */; };
+		3F5DEC541FC858FE004254F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC531FC858FE004254F7 /* ViewController.m */; };
+		3F5DEC571FC858FE004254F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DEC551FC858FE004254F7 /* Main.storyboard */; };
+		3F5DEC591FC858FE004254F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DEC581FC858FE004254F7 /* Assets.xcassets */; };
+		3F5DEC5C1FC858FE004254F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC5B1FC858FE004254F7 /* main.m */; };
+		3F5DEC681FC8592F004254F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC671FC8592F004254F7 /* AppDelegate.m */; };
+		3F5DEC6B1FC8592F004254F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC6A1FC8592F004254F7 /* ViewController.m */; };
+		3F5DEC6D1FC8592F004254F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DEC6C1FC8592F004254F7 /* Assets.xcassets */; };
+		3F5DEC701FC8592F004254F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DEC6E1FC8592F004254F7 /* Main.storyboard */; };
+		3F5DEC731FC8592F004254F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC721FC8592F004254F7 /* main.m */; };
+		3F5DEC7D1FC85954004254F7 /* TPUSELFastForwarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5DEBE71FC8568A004254F7 /* TPUSELFastForwarding.framework */; };
+		3F5DEC851FC85E2C004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
+		3F5DEC861FC85E2C004254F7 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
+		3F5DEC871FC85E31004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
+		3F5DEC881FC85E31004254F7 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
+		3F5DEC891FC85E36004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
+		3F5DEC8A1FC85E36004254F7 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
+		3F5DEC911FC860AE004254F7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DEC8F1FC860AE004254F7 /* Interface.storyboard */; };
+		3F5DEC931FC860AE004254F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DEC921FC860AE004254F7 /* Assets.xcassets */; };
+		3F5DEC9A1FC860AE004254F7 /* Example watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3F5DEC991FC860AE004254F7 /* Example watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3F5DECA01FC860AE004254F7 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DEC9F1FC860AE004254F7 /* InterfaceController.m */; };
+		3F5DECA31FC860AE004254F7 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DECA21FC860AE004254F7 /* ExtensionDelegate.m */; };
+		3F5DECA61FC860AE004254F7 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DECA51FC860AE004254F7 /* NotificationController.m */; };
+		3F5DECA81FC860AE004254F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5DECA71FC860AE004254F7 /* Assets.xcassets */; };
+		3F5DECAD1FC860AE004254F7 /* Example watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3F5DEC8D1FC860AE004254F7 /* Example watchOS.app */; };
+		3F5DECB91FC860EC004254F7 /* TPUSELFastForwarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5DEBDA1FC85662004254F7 /* TPUSELFastForwarding.framework */; };
+		3F5DECBC1FC862D9004254F7 /* TPUSELFastForwarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5DEBC01FC85625004254F7 /* TPUSELFastForwarding.framework */; };
+		3F5DECBD1FC86319004254F7 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECBE1FC86319004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECBF1FC86319004254F7 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECC01FC8632D004254F7 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECC11FC8632D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECC21FC8632D004254F7 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECC31FC8633D004254F7 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECC41FC8633D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DECC51FC8633D004254F7 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FA887F51FC7EFF700CB27D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA887F41FC7EFF700CB27D5 /* AppDelegate.m */; };
 		3FA887F81FC7EFF700CB27D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA887F71FC7EFF700CB27D5 /* ViewController.m */; };
 		3FA887FB1FC7EFF700CB27D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA887F91FC7EFF700CB27D5 /* Main.storyboard */; };
@@ -22,6 +58,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3F5DEC7B1FC8594E004254F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FDC63151FC7DD2100524907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5DEBE61FC8568A004254F7;
+			remoteInfo = "TPUSELFastForwarding macOS";
+		};
+		3F5DEC9B1FC860AE004254F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FDC63151FC7DD2100524907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5DEC981FC860AE004254F7;
+			remoteInfo = "Example watchOS Extension";
+		};
+		3F5DECAB1FC860AE004254F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FDC63151FC7DD2100524907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5DEC8C1FC860AE004254F7;
+			remoteInfo = "Example watchOS";
+		};
+		3F5DECB51FC860BB004254F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FDC63151FC7DD2100524907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5DEBBF1FC85625004254F7;
+			remoteInfo = "TPUSELFastForwarding watchOS";
+		};
+		3F5DECBA1FC860F4004254F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FDC63151FC7DD2100524907 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5DEBD91FC85662004254F7;
+			remoteInfo = "TPUSELFastForwarding tvOS";
+		};
 		3FA888151FC7F01800CB27D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3FDC63151FC7DD2100524907 /* Project object */;
@@ -31,9 +102,70 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F5DEC151FC85781004254F7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3F5DECAD1FC860AE004254F7 /* Example watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DECB11FC860AE004254F7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3F5DEC9A1FC860AE004254F7 /* Example watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3F5DEBC01FC85625004254F7 /* TPUSELFastForwarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPUSELFastForwarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEBDA1FC85662004254F7 /* TPUSELFastForwarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPUSELFastForwarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEBE71FC8568A004254F7 /* TPUSELFastForwarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPUSELFastForwarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEC4D1FC858FE004254F7 /* Example tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEC4F1FC858FE004254F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F5DEC501FC858FE004254F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F5DEC521FC858FE004254F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3F5DEC531FC858FE004254F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3F5DEC561FC858FE004254F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F5DEC581FC858FE004254F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F5DEC5A1FC858FE004254F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5DEC5B1FC858FE004254F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F5DEC641FC8592F004254F7 /* Example macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEC661FC8592F004254F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F5DEC671FC8592F004254F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F5DEC691FC8592F004254F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3F5DEC6A1FC8592F004254F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3F5DEC6C1FC8592F004254F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F5DEC6F1FC8592F004254F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F5DEC711FC8592F004254F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5DEC721FC8592F004254F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F5DEC741FC8592F004254F7 /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
+		3F5DEC8D1FC860AE004254F7 /* Example watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEC901FC860AE004254F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3F5DEC921FC860AE004254F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F5DEC941FC860AE004254F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5DEC991FC860AE004254F7 /* Example watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Example watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F5DEC9E1FC860AE004254F7 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		3F5DEC9F1FC860AE004254F7 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		3F5DECA11FC860AE004254F7 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		3F5DECA21FC860AE004254F7 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		3F5DECA41FC860AE004254F7 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		3F5DECA51FC860AE004254F7 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		3F5DECA71FC860AE004254F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F5DECA91FC860AE004254F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5DECAA1FC860AE004254F7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		3FA887DE1FC7EE5300CB27D5 /* TPUSELFastForwarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TPUSELFastForwarding.framework; path = "../../../Library/Developer/Xcode/DerivedData/TPreventUnrecognizedSEL-ajeokxehbwkchxcwerwgzghiyigi/Build/Products/Release-iphonesimulator/TPUSELFastForwarding.framework"; sourceTree = "<group>"; };
-		3FA887F11FC7EFF600CB27D5 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA887F11FC7EFF600CB27D5 /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA887F31FC7EFF700CB27D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FA887F41FC7EFF700CB27D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FA887F61FC7EFF700CB27D5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -53,6 +185,51 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3F5DEBBC1FC85625004254F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBD61FC85662004254F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBE31FC8568A004254F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC4A1FC858FE004254F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECB91FC860EC004254F7 /* TPUSELFastForwarding.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC611FC8592F004254F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC7D1FC85954004254F7 /* TPUSELFastForwarding.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC961FC860AE004254F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECBC1FC862D9004254F7 /* TPUSELFastForwarding.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FA887EE1FC7EFF600CB27D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,9 +248,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3FA887F21FC7EFF700CB27D5 /* Example */ = {
+		3F5DEC4E1FC858FE004254F7 /* Example tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				3F5DEC5B1FC858FE004254F7 /* main.m */,
+				3F5DEC4F1FC858FE004254F7 /* AppDelegate.h */,
+				3F5DEC501FC858FE004254F7 /* AppDelegate.m */,
+				3F5DEC521FC858FE004254F7 /* ViewController.h */,
+				3F5DEC531FC858FE004254F7 /* ViewController.m */,
+				3F5DEC551FC858FE004254F7 /* Main.storyboard */,
+				3F5DEC581FC858FE004254F7 /* Assets.xcassets */,
+				3F5DEC5A1FC858FE004254F7 /* Info.plist */,
+			);
+			path = "Example tvOS";
+			sourceTree = "<group>";
+		};
+		3F5DEC651FC8592F004254F7 /* Example macOS */ = {
+			isa = PBXGroup;
+			children = (
+				3F5DEC721FC8592F004254F7 /* main.m */,
+				3F5DEC661FC8592F004254F7 /* AppDelegate.h */,
+				3F5DEC671FC8592F004254F7 /* AppDelegate.m */,
+				3F5DEC691FC8592F004254F7 /* ViewController.h */,
+				3F5DEC6A1FC8592F004254F7 /* ViewController.m */,
+				3F5DEC6C1FC8592F004254F7 /* Assets.xcassets */,
+				3F5DEC6E1FC8592F004254F7 /* Main.storyboard */,
+				3F5DEC711FC8592F004254F7 /* Info.plist */,
+				3F5DEC741FC8592F004254F7 /* Example_macOS.entitlements */,
+			);
+			path = "Example macOS";
+			sourceTree = "<group>";
+		};
+		3F5DEC8E1FC860AE004254F7 /* Example watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				3F5DEC8F1FC860AE004254F7 /* Interface.storyboard */,
+				3F5DEC921FC860AE004254F7 /* Assets.xcassets */,
+				3F5DEC941FC860AE004254F7 /* Info.plist */,
+			);
+			path = "Example watchOS";
+			sourceTree = "<group>";
+		};
+		3F5DEC9D1FC860AE004254F7 /* Example watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3F5DECA11FC860AE004254F7 /* ExtensionDelegate.h */,
+				3F5DECA21FC860AE004254F7 /* ExtensionDelegate.m */,
+				3F5DEC9E1FC860AE004254F7 /* InterfaceController.h */,
+				3F5DEC9F1FC860AE004254F7 /* InterfaceController.m */,
+				3F5DECA41FC860AE004254F7 /* NotificationController.h */,
+				3F5DECA51FC860AE004254F7 /* NotificationController.m */,
+				3F5DECA71FC860AE004254F7 /* Assets.xcassets */,
+				3F5DECA91FC860AE004254F7 /* Info.plist */,
+				3F5DECAA1FC860AE004254F7 /* PushNotificationPayload.apns */,
+			);
+			path = "Example watchOS Extension";
+			sourceTree = "<group>";
+		};
+		3F5DECC61FC86451004254F7 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				3FA887F21FC7EFF700CB27D5 /* Example iOS */,
+				3F5DEC4E1FC858FE004254F7 /* Example tvOS */,
+				3F5DEC651FC8592F004254F7 /* Example macOS */,
+				3F5DEC8E1FC860AE004254F7 /* Example watchOS */,
+				3F5DEC9D1FC860AE004254F7 /* Example watchOS Extension */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		3FA887F21FC7EFF700CB27D5 /* Example iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3FA888021FC7EFF700CB27D5 /* main.m */,
 				3FA887F31FC7EFF700CB27D5 /* AppDelegate.h */,
 				3FA887F41FC7EFF700CB27D5 /* AppDelegate.m */,
 				3FA887F61FC7EFF700CB27D5 /* ViewController.h */,
@@ -82,17 +329,16 @@
 				3FA887FC1FC7EFF700CB27D5 /* Assets.xcassets */,
 				3FA887FE1FC7EFF700CB27D5 /* LaunchScreen.storyboard */,
 				3FA888011FC7EFF700CB27D5 /* Info.plist */,
-				3FA888021FC7EFF700CB27D5 /* main.m */,
 			);
-			path = Example;
+			path = "Example iOS";
 			sourceTree = "<group>";
 		};
 		3FDC63141FC7DD2100524907 = {
 			isa = PBXGroup;
 			children = (
-				3FDC63491FC7DEC000524907 /* Sources */,
 				3FDC63201FC7DD2100524907 /* TPUSELFastForwarding */,
-				3FA887F21FC7EFF700CB27D5 /* Example */,
+				3FDC63491FC7DEC000524907 /* Sources */,
+				3F5DECC61FC86451004254F7 /* Example */,
 				3FDC631F1FC7DD2100524907 /* Products */,
 				3FDC636A1FC7DFF900524907 /* Frameworks */,
 			);
@@ -102,7 +348,14 @@
 			isa = PBXGroup;
 			children = (
 				3FDC631E1FC7DD2100524907 /* TPUSELFastForwarding.framework */,
-				3FA887F11FC7EFF600CB27D5 /* Example.app */,
+				3FA887F11FC7EFF600CB27D5 /* Example iOS.app */,
+				3F5DEBC01FC85625004254F7 /* TPUSELFastForwarding.framework */,
+				3F5DEBDA1FC85662004254F7 /* TPUSELFastForwarding.framework */,
+				3F5DEBE71FC8568A004254F7 /* TPUSELFastForwarding.framework */,
+				3F5DEC4D1FC858FE004254F7 /* Example tvOS.app */,
+				3F5DEC641FC8592F004254F7 /* Example macOS.app */,
+				3F5DEC8D1FC860AE004254F7 /* Example watchOS.app */,
+				3F5DEC991FC860AE004254F7 /* Example watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +391,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3F5DEBBD1FC85625004254F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECBD1FC86319004254F7 /* TPUSELFastForwarding.h in Headers */,
+				3F5DECBE1FC86319004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */,
+				3F5DECBF1FC86319004254F7 /* TUndertakeObject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBD71FC85662004254F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECC01FC8632D004254F7 /* TPUSELFastForwarding.h in Headers */,
+				3F5DECC11FC8632D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */,
+				3F5DECC21FC8632D004254F7 /* TUndertakeObject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBE41FC8568A004254F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECC31FC8633D004254F7 /* TPUSELFastForwarding.h in Headers */,
+				3F5DECC41FC8633D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */,
+				3F5DECC51FC8633D004254F7 /* TUndertakeObject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FDC631B1FC7DD2100524907 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,27 +434,154 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3FA887F01FC7EFF600CB27D5 /* Example */ = {
+		3F5DEBBF1FC85625004254F7 /* TPUSELFastForwarding watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FA8880F1FC7EFF700CB27D5 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = 3F5DEBC51FC85625004254F7 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding watchOS" */;
+			buildPhases = (
+				3F5DEBBB1FC85625004254F7 /* Sources */,
+				3F5DEBBC1FC85625004254F7 /* Frameworks */,
+				3F5DEBBD1FC85625004254F7 /* Headers */,
+				3F5DEBBE1FC85625004254F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TPUSELFastForwarding watchOS";
+			productName = "TPUSELFastForwarding-watchOS";
+			productReference = 3F5DEBC01FC85625004254F7 /* TPUSELFastForwarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F5DEBD91FC85662004254F7 /* TPUSELFastForwarding tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5DEBDF1FC85662004254F7 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding tvOS" */;
+			buildPhases = (
+				3F5DEBD51FC85662004254F7 /* Sources */,
+				3F5DEBD61FC85662004254F7 /* Frameworks */,
+				3F5DEBD71FC85662004254F7 /* Headers */,
+				3F5DEBD81FC85662004254F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TPUSELFastForwarding tvOS";
+			productName = "TPUSELFastForwarding tvOS";
+			productReference = 3F5DEBDA1FC85662004254F7 /* TPUSELFastForwarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F5DEBE61FC8568A004254F7 /* TPUSELFastForwarding macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5DEBEC1FC8568A004254F7 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding macOS" */;
+			buildPhases = (
+				3F5DEBE21FC8568A004254F7 /* Sources */,
+				3F5DEBE31FC8568A004254F7 /* Frameworks */,
+				3F5DEBE41FC8568A004254F7 /* Headers */,
+				3F5DEBE51FC8568A004254F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TPUSELFastForwarding macOS";
+			productName = "TPUSELFastForwarding macOS";
+			productReference = 3F5DEBE71FC8568A004254F7 /* TPUSELFastForwarding.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3F5DEC4C1FC858FE004254F7 /* Example tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5DEC5D1FC858FE004254F7 /* Build configuration list for PBXNativeTarget "Example tvOS" */;
+			buildPhases = (
+				3F5DEC491FC858FE004254F7 /* Sources */,
+				3F5DEC4A1FC858FE004254F7 /* Frameworks */,
+				3F5DEC4B1FC858FE004254F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5DECBB1FC860F4004254F7 /* PBXTargetDependency */,
+			);
+			name = "Example tvOS";
+			productName = "Example tvOS";
+			productReference = 3F5DEC4D1FC858FE004254F7 /* Example tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F5DEC631FC8592F004254F7 /* Example macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5DEC751FC8592F004254F7 /* Build configuration list for PBXNativeTarget "Example macOS" */;
+			buildPhases = (
+				3F5DEC601FC8592F004254F7 /* Sources */,
+				3F5DEC611FC8592F004254F7 /* Frameworks */,
+				3F5DEC621FC8592F004254F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5DEC7C1FC8594E004254F7 /* PBXTargetDependency */,
+			);
+			name = "Example macOS";
+			productName = "Example macOS";
+			productReference = 3F5DEC641FC8592F004254F7 /* Example macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F5DEC8C1FC860AE004254F7 /* Example watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5DECB21FC860AE004254F7 /* Build configuration list for PBXNativeTarget "Example watchOS" */;
+			buildPhases = (
+				3F5DEC8B1FC860AE004254F7 /* Resources */,
+				3F5DECB11FC860AE004254F7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5DEC9C1FC860AE004254F7 /* PBXTargetDependency */,
+			);
+			name = "Example watchOS";
+			productName = "Example watchOS";
+			productReference = 3F5DEC8D1FC860AE004254F7 /* Example watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3F5DEC981FC860AE004254F7 /* Example watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F5DECAE1FC860AE004254F7 /* Build configuration list for PBXNativeTarget "Example watchOS Extension" */;
+			buildPhases = (
+				3F5DEC951FC860AE004254F7 /* Sources */,
+				3F5DEC961FC860AE004254F7 /* Frameworks */,
+				3F5DEC971FC860AE004254F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F5DECB61FC860BB004254F7 /* PBXTargetDependency */,
+			);
+			name = "Example watchOS Extension";
+			productName = "Example watchOS Extension";
+			productReference = 3F5DEC991FC860AE004254F7 /* Example watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		3FA887F01FC7EFF600CB27D5 /* Example iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FA8880F1FC7EFF700CB27D5 /* Build configuration list for PBXNativeTarget "Example iOS" */;
 			buildPhases = (
 				3FA887ED1FC7EFF600CB27D5 /* Sources */,
 				3FA887EE1FC7EFF600CB27D5 /* Frameworks */,
 				3FA887EF1FC7EFF600CB27D5 /* Resources */,
+				3F5DEC151FC85781004254F7 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				3FA888161FC7F01800CB27D5 /* PBXTargetDependency */,
+				3F5DECAC1FC860AE004254F7 /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = "Example iOS";
 			productName = Example;
-			productReference = 3FA887F11FC7EFF600CB27D5 /* Example.app */;
+			productReference = 3FA887F11FC7EFF600CB27D5 /* Example iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding */ = {
+		3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FDC63261FC7DD2100524907 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding" */;
+			buildConfigurationList = 3FDC63261FC7DD2100524907 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding iOS" */;
 			buildPhases = (
 				3FDC63191FC7DD2100524907 /* Sources */,
 				3FDC631A1FC7DD2100524907 /* Frameworks */,
@@ -182,7 +592,7 @@
 			);
 			dependencies = (
 			);
-			name = TPUSELFastForwarding;
+			name = "TPUSELFastForwarding iOS";
 			productName = TPUSELFastForwarding;
 			productReference = 3FDC631E1FC7DD2100524907 /* TPUSELFastForwarding.framework */;
 			productType = "com.apple.product-type.framework";
@@ -196,6 +606,34 @@
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "邵伟男";
 				TargetAttributes = {
+					3F5DEBBF1FC85625004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3F5DEBD91FC85662004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3F5DEBE61FC8568A004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3F5DEC4C1FC858FE004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3F5DEC631FC8592F004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3F5DEC8C1FC860AE004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					3F5DEC981FC860AE004254F7 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 					3FA887F01FC7EFF600CB27D5 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -219,13 +657,76 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding */,
-				3FA887F01FC7EFF600CB27D5 /* Example */,
+				3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding iOS */,
+				3F5DEBBF1FC85625004254F7 /* TPUSELFastForwarding watchOS */,
+				3F5DEBD91FC85662004254F7 /* TPUSELFastForwarding tvOS */,
+				3F5DEBE61FC8568A004254F7 /* TPUSELFastForwarding macOS */,
+				3FA887F01FC7EFF600CB27D5 /* Example iOS */,
+				3F5DEC4C1FC858FE004254F7 /* Example tvOS */,
+				3F5DEC631FC8592F004254F7 /* Example macOS */,
+				3F5DEC8C1FC860AE004254F7 /* Example watchOS */,
+				3F5DEC981FC860AE004254F7 /* Example watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3F5DEBBE1FC85625004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBD81FC85662004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBE51FC8568A004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC4B1FC858FE004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC591FC858FE004254F7 /* Assets.xcassets in Resources */,
+				3F5DEC571FC858FE004254F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC621FC8592F004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC6D1FC8592F004254F7 /* Assets.xcassets in Resources */,
+				3F5DEC701FC8592F004254F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC8B1FC860AE004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC931FC860AE004254F7 /* Assets.xcassets in Resources */,
+				3F5DEC911FC860AE004254F7 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC971FC860AE004254F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECA81FC860AE004254F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FA887EF1FC7EFF600CB27D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +747,63 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F5DEBBB1FC85625004254F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC851FC85E2C004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */,
+				3F5DEC861FC85E2C004254F7 /* TUndertakeObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBD51FC85662004254F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC871FC85E31004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */,
+				3F5DEC881FC85E31004254F7 /* TUndertakeObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEBE21FC8568A004254F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC891FC85E36004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */,
+				3F5DEC8A1FC85E36004254F7 /* TUndertakeObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC491FC858FE004254F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC541FC858FE004254F7 /* ViewController.m in Sources */,
+				3F5DEC5C1FC858FE004254F7 /* main.m in Sources */,
+				3F5DEC511FC858FE004254F7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC601FC8592F004254F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DEC6B1FC8592F004254F7 /* ViewController.m in Sources */,
+				3F5DEC731FC8592F004254F7 /* main.m in Sources */,
+				3F5DEC681FC8592F004254F7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F5DEC951FC860AE004254F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5DECA31FC860AE004254F7 /* ExtensionDelegate.m in Sources */,
+				3F5DECA01FC860AE004254F7 /* InterfaceController.m in Sources */,
+				3F5DECA61FC860AE004254F7 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FA887ED1FC7EFF600CB27D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,14 +826,63 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3F5DEC7C1FC8594E004254F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5DEBE61FC8568A004254F7 /* TPUSELFastForwarding macOS */;
+			targetProxy = 3F5DEC7B1FC8594E004254F7 /* PBXContainerItemProxy */;
+		};
+		3F5DEC9C1FC860AE004254F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5DEC981FC860AE004254F7 /* Example watchOS Extension */;
+			targetProxy = 3F5DEC9B1FC860AE004254F7 /* PBXContainerItemProxy */;
+		};
+		3F5DECAC1FC860AE004254F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5DEC8C1FC860AE004254F7 /* Example watchOS */;
+			targetProxy = 3F5DECAB1FC860AE004254F7 /* PBXContainerItemProxy */;
+		};
+		3F5DECB61FC860BB004254F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5DEBBF1FC85625004254F7 /* TPUSELFastForwarding watchOS */;
+			targetProxy = 3F5DECB51FC860BB004254F7 /* PBXContainerItemProxy */;
+		};
+		3F5DECBB1FC860F4004254F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5DEBD91FC85662004254F7 /* TPUSELFastForwarding tvOS */;
+			targetProxy = 3F5DECBA1FC860F4004254F7 /* PBXContainerItemProxy */;
+		};
 		3FA888161FC7F01800CB27D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding */;
+			target = 3FDC631D1FC7DD2100524907 /* TPUSELFastForwarding iOS */;
 			targetProxy = 3FA888151FC7F01800CB27D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3F5DEC551FC858FE004254F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5DEC561FC858FE004254F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F5DEC6E1FC8592F004254F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5DEC6F1FC8592F004254F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F5DEC8F1FC860AE004254F7 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F5DEC901FC860AE004254F7 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		3FA887F91FC7EFF700CB27D5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,15 +902,289 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3F5DEBC61FC85625004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPUSELFastForwarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-watchOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		3F5DEBC71FC85625004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPUSELFastForwarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-watchOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		3F5DEBE01FC85662004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPUSELFastForwarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-tvOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		3F5DEBE11FC85662004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/TPUSELFastForwarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-tvOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		3F5DEBED1FC8568A004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/TPUSELFastForwarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-macOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3F5DEBEE1FC8568A004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/TPUSELFastForwarding/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-macOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3F5DEC5E1FC858FE004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		3F5DEC5F1FC858FE004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		3F5DEC761FC8592F004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example macOS/Example_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3F5DEC771FC8592F004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example macOS/Example_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3F5DECAF1FC860AE004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		3F5DECB01FC860AE004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		3F5DECB31FC860AE004254F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				IBSC_MODULE = Example_watchOS_Extension;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		3F5DECB41FC860AE004254F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TS9WTSBK78;
+				IBSC_MODULE = Example_watchOS_Extension;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
 		3FA888101FC7EFF700CB27D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS9WTSBK78;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.tbd.TPUSELFastForwarding.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,9 +1196,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TS9WTSBK78;
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Example iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.tbd.TPUSELFastForwarding.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.Example-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -445,8 +1326,8 @@
 				INFOPLIST_FILE = TPUSELFastForwarding/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.tbd.TPreventUnrecognizedSEL.FastForwarding;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-iOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -465,8 +1346,8 @@
 				INFOPLIST_FILE = TPUSELFastForwarding/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.tbd.TPreventUnrecognizedSEL.FastForwarding;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "tbd.tech.TPUSELFastForwarding-iOS";
+				PRODUCT_NAME = TPUSELFastForwarding;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,7 +1357,70 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FA8880F1FC7EFF700CB27D5 /* Build configuration list for PBXNativeTarget "Example" */ = {
+		3F5DEBC51FC85625004254F7 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DEBC61FC85625004254F7 /* Debug */,
+				3F5DEBC71FC85625004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5DEBDF1FC85662004254F7 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DEBE01FC85662004254F7 /* Debug */,
+				3F5DEBE11FC85662004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5DEBEC1FC8568A004254F7 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DEBED1FC8568A004254F7 /* Debug */,
+				3F5DEBEE1FC8568A004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5DEC5D1FC858FE004254F7 /* Build configuration list for PBXNativeTarget "Example tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DEC5E1FC858FE004254F7 /* Debug */,
+				3F5DEC5F1FC858FE004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5DEC751FC8592F004254F7 /* Build configuration list for PBXNativeTarget "Example macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DEC761FC8592F004254F7 /* Debug */,
+				3F5DEC771FC8592F004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5DECAE1FC860AE004254F7 /* Build configuration list for PBXNativeTarget "Example watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DECAF1FC860AE004254F7 /* Debug */,
+				3F5DECB01FC860AE004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F5DECB21FC860AE004254F7 /* Build configuration list for PBXNativeTarget "Example watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5DECB31FC860AE004254F7 /* Debug */,
+				3F5DECB41FC860AE004254F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FA8880F1FC7EFF700CB27D5 /* Build configuration list for PBXNativeTarget "Example iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FA888101FC7EFF700CB27D5 /* Debug */,
@@ -494,7 +1438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FDC63261FC7DD2100524907 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding" */ = {
+		3FDC63261FC7DD2100524907 /* Build configuration list for PBXNativeTarget "TPUSELFastForwarding iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FDC63271FC7DD2100524907 /* Debug */,
