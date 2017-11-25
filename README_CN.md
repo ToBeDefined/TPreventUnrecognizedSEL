@@ -18,6 +18,7 @@ TPreventUnrecognizedSEL
 <div align="center">
 
 [English Document](README.md)
+[使用方法以及原理](http://tbd.ink/2017/11/25/iOS/170112501.TPreventUnrecognizedSEL%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/index/)
 
 </div>
 
@@ -62,7 +63,8 @@ pod 'TPreventUnrecognizedSEL/NormalForwarding'
 $ pod install
 ```
 
-**注意：你只可以使用其中一个subspec，`NormalForwarding`和`FastForwarding`二者只能选其一**
+**注意：你只可以使用其中一个subspec，`NormalForwarding`和`FastForwarding`二者只能选其一** 
+**使用`pod 'TPreventUnrecognizedSEL`默认是`pod'TPreventUnrecognizedSEL/FastForwarding`**
 
 #### Carthage
 
@@ -92,7 +94,34 @@ github "tobedefined/TPreventUnrecognizedSEL"
 
 导入项目之后不用处理任何操作即可生效
 
-#### 其他功能
+#### 运行错误信息获取
+
+##### 导入头文件
+
+|   模块和语言 \ 导入模块方式        |               源文件               |                            CocoaPods                             |                            Carthage                             |
+| :----------------------------: | :--------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
+|  TPUSELFastForwarding & ObjC   |  #import "TPUSELFastForwarding.h"  |  #import &lt;TPreventUnrecognizedSEL/TPUSELFastForwarding.h&gt;  |   #import &lt;TPUSELFastForwarding/TPUSELFastForwarding.h&gt;   |
+|  TPUSELFastForwarding & Swift  |      add ⤴ in Bridging-Header     |                  import TPreventUnrecognizedSEL                  |                   import TPUSELFastForwarding                   |
+| TPUSELNormalForwarding & ObjC  | #import "TPUSELNormalForwarding.h" | #import &lt;TPreventUnrecognizedSEL/TPUSELNormalForwarding.h&gt; | #import &lt;TPUSELNormalForwarding/TPUSELNormalForwarding.h&gt; |
+| TPUSELNormalForwarding & Swift |     add ⤴ in Bridging-Header      |                  import TPreventUnrecognizedSEL                  |                  import TPUSELNormalForwarding                  |
+
+##### 设置Block
+
+在APP的 **`main.m`文件的`main()`函数中** 或者 **在APP的`didFinishLaunching`方法中** 加入以下代码可以获得缺失方法的具体信息：
+
+```objc
+[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
+    // 在这里写你要做的事情
+    // 比如上传到服务器或者打印log等
+}];
+```
+
+```swift
+NSObject.setHandleUnrecognizedSELErrorBlock { (cls, selector, methodType) in
+    // 在这里写你要做的事情
+    // 比如上传到服务器或者打印log等
+}
+```
 
 关于一些定义：在`NSObject+TPUSELFastForwarding.h`或者`NSObject+TPUSELNormalForwarding.h`中有以下定义和方法
 
@@ -116,11 +145,3 @@ typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selec
 - `methodType`: `UnrecognizedMethodType`类型；为所缺失的方法类型（类方法or对象方法）
 
 
-在APP的 **`main.m`文件的`main()`函数中** 或者 **在APP的`didFinishLaunching`方法中** 加入以下代码可以获得缺失方法的具体信息：
-
-```objc
-[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
-    // 在这里写你要做的事情
-    // 比如上传到服务器或者打印log等
-}];
-```

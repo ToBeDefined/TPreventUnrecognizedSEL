@@ -18,6 +18,7 @@ TPreventUnrecognizedSEL
 <div align="center">
 
 [中文文档](README_CN.md)
+[Instructions and Principle](http://tbd.ink/2017/11/25/iOS/170112501.TPreventUnrecognizedSEL%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/index/)
 
 </div>
 
@@ -64,6 +65,7 @@ $ pod install
 ```
 
 **Note: you can only use one of the subspec, `NormalForwarding` or `FastForwarding`**
+**Use `pod 'TPreventUnrecognizedSEL` default is `pod'TPreventUnrecognizedSEL/FastForwarding`**
 
 #### Carthage
 
@@ -92,7 +94,33 @@ Run `carthage update` to build the framework and drag the built `TPUSELFastForwa
 
 Import into the project without any action to take effect
 
-#### Other Functions
+#### Get Run error message 
+
+##### Import Header
+
+| Module and lang \ Import module mode |            Source File             |                            CocoaPods                             |                            Carthage                             |
+| :----------------------------------: | :--------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
+|     TPUSELFastForwarding & ObjC      |  #import "TPUSELFastForwarding.h"  |  #import &lt;TPreventUnrecognizedSEL/TPUSELFastForwarding.h&gt;  |   #import &lt;TPUSELFastForwarding/TPUSELFastForwarding.h&gt;   |
+|     TPUSELFastForwarding & Swift     |      add ⤴ in Bridging-Header     |                  import TPreventUnrecognizedSEL                  |                   import TPUSELFastForwarding                   |
+|    TPUSELNormalForwarding & ObjC     | #import "TPUSELNormalForwarding.h" | #import &lt;TPreventUnrecognizedSEL/TPUSELNormalForwarding.h&gt; | #import &lt;TPUSELNormalForwarding/TPUSELNormalForwarding.h&gt; |
+|    TPUSELNormalForwarding & Swift    |     add ⤴ in Bridging-Header      |                  import TPreventUnrecognizedSEL                  |                  import TPUSELNormalForwarding                  |
+
+##### Set Block
+
+In the  **`main()` function of the APP's `main.m` file**  or  **in the APP's `didFinishLaunching` method**  add the following code to get the specific information about the missing method:
+```objc
+[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
+    // DO SOMETHING
+    // like upload to server or print log or others
+}];
+```
+
+```swift
+NSObject.setHandleUnrecognizedSELErrorBlock { (cls, selector, methodType) in
+    // DO SOMETHING
+    // like upload to server or print log or others
+}
+```
 
 For some definitions: The following definitions and methods are in `NSObject+TPUSELFastForwarding.h` or `NSObject+TPUSELNormalForwarding.h`
 
@@ -115,11 +143,3 @@ typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selec
 - `selector`: `SEL` type; the missing method name, `NSStringFromSelector(selector)` can be used to return the NSString for the method name
 - `methodType`: `UnrecognizedMethodType` type; for the missing method type (class method or object method)
 
-
-In the  **`main()` function of the APP's `main.m` file**  or  **in the APP's `didFinishLaunching` method**  add the following code to get the specific information about the missing method:
-```objc
-[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
-    // DO SOMETHING
-    // like upload to server or print log or others
-}];
-```
