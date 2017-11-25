@@ -26,8 +26,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"CLASS: %@, %@ ==> %@", NSStringFromClass(cls), typeStr, NSStringFromSelector(selector));
         }];
         
-        [[[TestFastForwardingOBJ alloc] init] performSelector:@selector(iOS:losted:instance:method:inVC:)];
-        [TestFastForwardingOBJ performSelector:@selector(iOS:losted:class:method:inVCClass:)];
+        [[[TestFastForwardingOBJ alloc] init] performSelector:@selector(losted:instance:method:)];
+        [TestFastForwardingOBJ performSelector:@selector(losted:class:method:)];
         
         NSLog(@"Test Fast Forwarding Success");
     }

@@ -26,8 +26,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"CLASS: %@, %@ ==> %@", NSStringFromClass(cls), typeStr, NSStringFromSelector(selector));
         }];
         
-        [[[TestNormalForwardingOBJ alloc] init] performSelector:@selector(iOS:losted:instance:method:inVC:)];
-        [TestNormalForwardingOBJ performSelector:@selector(iOS:losted:class:method:inVCClass:)];
+        [[[TestNormalForwardingOBJ alloc] init] performSelector:@selector(losted:instance:method:)];
+        [TestNormalForwardingOBJ performSelector:@selector(losted:class:method:)];
         
         NSLog(@"Test Normal Forwarding Success");
     }
