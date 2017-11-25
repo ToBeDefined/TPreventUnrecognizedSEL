@@ -29,11 +29,10 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Class metaClass = objc_getMetaClass(class_getName(self));
         method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardingTargetForSelector:)),
                                        class_getInstanceMethod(self, @selector(__t_forwardingTargetForSelector:)));
-        method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(forwardingTargetForSelector:)),
-                                       class_getInstanceMethod(metaClass, @selector(__t_forwardingTargetForSelector:)));
+        method_exchangeImplementations(class_getClassMethod(self, @selector(forwardingTargetForSelector:)),
+                                       class_getClassMethod(self, @selector(__t_forwardingTargetForSelector:)));
     });
 }
 
