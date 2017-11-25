@@ -27,15 +27,18 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 #pragma mark - ForwardInvocation
 
 + (void)load {
-    Class metaClass = objc_getMetaClass(class_getName(self));
-    method_exchangeImplementations(class_getInstanceMethod(self, @selector(methodSignatureForSelector:)),
-                                   class_getInstanceMethod(self, @selector(__t_methodSignatureForSelector:)));
-    method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardInvocation:)),
-                                   class_getInstanceMethod(self, @selector(__t_forwardInvocation:)));
-    method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(methodSignatureForSelector:)),
-                                   class_getInstanceMethod(metaClass, @selector(__t_methodSignatureForSelector:)));
-    method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(forwardInvocation:)),
-                                   class_getInstanceMethod(metaClass, @selector(__t_forwardInvocation:)));
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class metaClass = objc_getMetaClass(class_getName(self));
+        method_exchangeImplementations(class_getInstanceMethod(self, @selector(methodSignatureForSelector:)),
+                                       class_getInstanceMethod(self, @selector(__t_methodSignatureForSelector:)));
+        method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardInvocation:)),
+                                       class_getInstanceMethod(self, @selector(__t_forwardInvocation:)));
+        method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(methodSignatureForSelector:)),
+                                       class_getInstanceMethod(metaClass, @selector(__t_methodSignatureForSelector:)));
+        method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(forwardInvocation:)),
+                                       class_getInstanceMethod(metaClass, @selector(__t_forwardInvocation:)));
+    });
 }
 
 - (NSMethodSignature *)__t_methodSignatureForSelector:(SEL)aSelector {

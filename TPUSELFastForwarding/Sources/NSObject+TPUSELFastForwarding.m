@@ -27,11 +27,14 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 #pragma mark - FastForwarding
 
 + (void)load {
-    Class metaClass = objc_getMetaClass(class_getName(self));
-    method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardingTargetForSelector:)),
-                                   class_getInstanceMethod(self, @selector(__t_forwardingTargetForSelector:)));
-    method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(forwardingTargetForSelector:)),
-                                   class_getInstanceMethod(metaClass, @selector(__t_forwardingTargetForSelector:)));
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class metaClass = objc_getMetaClass(class_getName(self));
+        method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardingTargetForSelector:)),
+                                       class_getInstanceMethod(self, @selector(__t_forwardingTargetForSelector:)));
+        method_exchangeImplementations(class_getInstanceMethod(metaClass, @selector(forwardingTargetForSelector:)),
+                                       class_getInstanceMethod(metaClass, @selector(__t_forwardingTargetForSelector:)));
+    });
 }
 
 - (id)__t_forwardingTargetForSelector:(SEL)aSelector {
