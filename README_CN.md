@@ -19,7 +19,7 @@ TPreventUnrecognizedSEL
 
 [English Document](README.md)
 
-[使用方法以及原理](http://tbd.ink/2017/11/25/iOS/170112501.TPreventUnrecognizedSEL%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/index/)
+[TPreventUnrecognizedSEL的实现原理](http://tbd.ink/2017/11/26/iOS/170112601.TPreventUnrecognizedSEL%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86/index/)
 
 </div>
 
