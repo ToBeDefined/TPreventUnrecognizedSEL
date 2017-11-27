@@ -65,7 +65,7 @@ $ pod install
 ```
 
 **注意：你只可以使用其中一个subspec，`NormalForwarding`和`FastForwarding`二者只能选其一** 
-**使用`pod 'TPreventUnrecognizedSEL`默认是`pod'TPreventUnrecognizedSEL/FastForwarding`**
+**使用`pod 'TPreventUnrecognizedSEL'`默认是`pod 'TPreventUnrecognizedSEL/FastForwarding'`**
 
 #### Carthage
 

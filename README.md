@@ -66,7 +66,7 @@ $ pod install
 ```
 
 **Note: you can only use one of the subspec, `NormalForwarding` or `FastForwarding`**
-**Use `pod 'TPreventUnrecognizedSEL` default is `pod'TPreventUnrecognizedSEL/FastForwarding`**
+**Use `pod 'TPreventUnrecognizedSEL'` default is `pod 'TPreventUnrecognizedSEL/FastForwarding'`**
 
 #### Carthage
 
