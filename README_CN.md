@@ -26,6 +26,10 @@ TPreventUnrecognizedSEL
 ### 特点
 
 - 使用runtime动态添加方法防止产生`Unrecognized Selector`错误，可以防止因为对象方法和类方法缺失所产生的APP崩溃。
+    > 对象方法：`*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[TestClass losted:instance:method:]: unrecognized selector sent to instance 0x102c....'`
+    > 
+    > 类方法：`*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '+[TestClass losted:class:method:]: unrecognized selector sent to class 0x10000....'`
+
 - 可以获取缺失方法的具体信息，包括：
     - 缺失类方法或对象方法的类名；
     - 所缺失的方法名；
@@ -49,6 +53,7 @@ $ gem install cocoapods
 要使用CocoaPods将`TPreventUnrecognizedSEL`集成到您的Xcode项目中，请在`Podfile`中加入：
 
 ```ruby
+# pod 'TPreventUnrecognizedSEL' 默认是使用 pod 'TPreventUnrecognizedSEL/FastForwarding'
 pod 'TPreventUnrecognizedSEL/FastForwarding'
 ```
 
@@ -65,6 +70,7 @@ $ pod install
 ```
 
 **注意：你只可以使用其中一个subspec，`NormalForwarding`和`FastForwarding`二者只能选其一** 
+
 **使用`pod 'TPreventUnrecognizedSEL'`默认是`pod 'TPreventUnrecognizedSEL/FastForwarding'`**
 
 #### Carthage

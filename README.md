@@ -26,6 +26,10 @@ TPreventUnrecognizedSEL
 ### Features
 
 - Using runtime to dynamically add methods to prevent `Unrecognized Selector` errors prevents the app from crashing due to missing object and class methods.
+    > Instance method: `*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[TestClass losted:instance:method:]: unrecognized selector sent to instance 0x102c....'`
+    > 
+    > Class method: `*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '+[TestClass losted:class:method:]: unrecognized selector sent to class 0x10000....'`
+
 - Can get the specific information of the missing method, including: 
     - The class name of the missing class method or object method; 
     - The name of the missing method; 
@@ -50,6 +54,7 @@ $ gem install cocoapods
 To integrate `TPreventUnrecognizedSEL` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
+# (pod 'TPreventUnrecognizedSEL') default is use (pod 'TPreventUnrecognizedSEL/FastForwarding')
 pod 'TPreventUnrecognizedSEL/FastForwarding'
 ```
 
@@ -66,6 +71,7 @@ $ pod install
 ```
 
 **Note: you can only use one of the subspec, `NormalForwarding` or `FastForwarding`**
+
 **Use `pod 'TPreventUnrecognizedSEL'` default is `pod 'TPreventUnrecognizedSEL/FastForwarding'`**
 
 #### Carthage
