@@ -302,8 +302,8 @@
 		3FDC63151FC7DD2100524907 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = "邵伟男";
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "TBD.TECH";
 				TargetAttributes = {
 					3F5DEBBF1FC85625004254F7 = {
 						CreatedOnToolsVersion = 9.1;
@@ -529,7 +529,7 @@
 		3F5DEBED1FC8568A004254F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -552,7 +552,7 @@
 		3F5DEBEE1FC8568A004254F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
