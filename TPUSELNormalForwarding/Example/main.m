@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <TPUSELFastForwarding/TPUSELFastForwarding.h>
+#import <TPUSELNormalForwarding/TPUSELNormalForwarding.h>
 
 @interface TestNormalForwardingOBJ: NSObject
 @end
