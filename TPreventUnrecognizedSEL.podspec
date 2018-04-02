@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name                      = 'TPreventUnrecognizedSEL'
-    s.version                   = '1.0.1'
+    s.version                   = '1.0.2'
     s.summary                   = <<-DESC
     Use TPreventUnrecognizedSEL can prevent the unrecognized selector crash. ⚠️You just can use NormalForwarding.
                                     DESC
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
     # end
   
     s.subspec 'NormalForwarding' do |ss|
-        ss.private_header_files = 'TPUSELNormalForwarding/Sources/*.h'
+        ss.public_header_files  = 'TPUSELNormalForwarding/Sources/*.h'
         ss.source_files         = 'TPUSELNormalForwarding/Sources/*.{h,m}'
     end
 end
