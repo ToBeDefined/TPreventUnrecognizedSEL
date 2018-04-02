@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TPUSELFastForwarding/TPUSELFastForwarding.xcodeproj">
+      location = "group:TPUSELNormalForwarding/TPUSELNormalForwarding.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:TPUSELNormalForwarding/TPUSELNormalForwarding.xcodeproj">
+      location = "group:TPUSELFastForwarding/TPUSELFastForwarding.xcodeproj">
    </FileRef>
 </Workspace>

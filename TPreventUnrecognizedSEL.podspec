@@ -10,15 +10,13 @@ Pod::Spec.new do |s|
     s.name                      = 'TPreventUnrecognizedSEL'
     s.version                   = '1.0.1'
     s.summary                   = <<-DESC
-    Use TPreventUnrecognizedSEL can prevent the unrecognized selector crash.
-    You just can use one of FastForwarding and NormalForwarding.
+    Use TPreventUnrecognizedSEL can prevent the unrecognized selector crash. ⚠️You just can use NormalForwarding.
                                     DESC
     s.description               = <<-DESC
     Use TPreventUnrecognizedSEL can make you project prevent the unrecognized selector crash.
-    You just can use `FastForwarding` subspec **or**  use `NormalForwarding` subspec, you can not use both them at the same time.
-    In podfile `pod 'TPreventUnrecognizedSEL/FastForwarding'` to use `FastForwarding` subspec;
-    In podfile `pod 'TPreventUnrecognizedSEL/NormalForwarding'` to use `NormalForwarding` subspec;
-    !!! Remember, **JUST USE ONE OF THEM** !!!
+    You just can use `NormalForwarding` subspec, because some of the system functions are used FastForwarding.
+    In podfile `pod 'TPreventUnrecognizedSEL'` or `pod 'TPreventUnrecognizedSEL/NormalForwarding'` to use `NormalForwarding` subspec;
+    !!! ⚠️Remember, **JUST USE `NormalForwarding` subspec** ⚠️!!!
     github : https://github.com/tobedefined/TPreventUnrecognizedSEL
                                     DESC
     s.homepage                  = 'https://github.com/tobedefined/TPreventUnrecognizedSEL'
@@ -27,17 +25,17 @@ Pod::Spec.new do |s|
     s.social_media_url          = 'http://tbd.ink/'
     s.source                    = { :git => 'https://github.com/tobedefined/TPreventUnrecognizedSEL.git', :tag => s.version}
     s.frameworks                = 'Foundation'
-    s.default_subspec           = 'FastForwarding'
+    s.default_subspec           = 'NormalForwarding'
     s.requires_arc              = true
     s.ios.deployment_target     = '3.1'
     s.osx.deployment_target     = '10.6'
     s.tvos.deployment_target    = '9.0'
     s.watchos.deployment_target = '1.0'
   
-    s.subspec 'FastForwarding' do |ss|
-      ss.public_header_files    = 'TPUSELFastForwarding/Sources/*.h'
-      ss.source_files           = 'TPUSELFastForwarding/Sources/*.{h,m}'
-    end
+    # s.subspec 'FastForwarding' do |ss|
+    #   ss.public_header_files    = 'TPUSELFastForwarding/Sources/*.h'
+    #   ss.source_files           = 'TPUSELFastForwarding/Sources/*.{h,m}'
+    # end
   
     s.subspec 'NormalForwarding' do |ss|
         ss.private_header_files = 'TPUSELNormalForwarding/Sources/*.h'

@@ -35,13 +35,17 @@ TPreventUnrecognizedSEL
     - The name of the missing method; 
     - The missing object method or class method.
 
+**⚠️Note: You can only use `TPUSELNormalForwarding`, some methods of the system use fast forwarding technology, in order to prevent overwriting system methods, you can only use the normal forwarding**
+
+**⚠️Note: TPUSELFastForwarding is for reference only and is not to be used**
+
 ### Installation
 
 #### Source File
 
-The source file contains two module directories: `TPUSELFastForwarding` and `TPUSELNormalForwarding`; Drag all the files inside the `Sources` folder in the corresponding module directory into you project.
+The source file contains two module directories: `TPUSELNormalForwarding` ~~and `TPUSELFastForwarding`~~ (some methods of the system use fast forwarding technology, in order to prevent overwriting system methods, you can only use the normal forwarding) ; Drag all the files inside the `Sources` folder in the corresponding module directory into you project.
 
-**Note: you can only use one of the modules to use, the module directory corresponding to all the files inside the Sources file can be dragged into the project.**
+**⚠️Note: you can only use `TPUSELNormalForwarding`, the module directory corresponding to all the files inside the Sources file can be dragged into the project.**
 
 #### CocoaPods
 
@@ -54,13 +58,7 @@ $ gem install cocoapods
 To integrate `TPreventUnrecognizedSEL` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-# (pod 'TPreventUnrecognizedSEL') default is use (pod 'TPreventUnrecognizedSEL/FastForwarding')
-pod 'TPreventUnrecognizedSEL/FastForwarding'
-```
-
-or this:
-
-```ruby
+# (pod 'TPreventUnrecognizedSEL') default is use (pod 'TPreventUnrecognizedSEL/NormalForwarding')
 pod 'TPreventUnrecognizedSEL/NormalForwarding'
 ```
 
@@ -70,9 +68,9 @@ Then, run the following command:
 $ pod install
 ```
 
-**Note: you can only use one of the subspec, `NormalForwarding` or `FastForwarding`**
+**⚠️Note: you can only use `NormalForwarding`**
 
-**Use `pod 'TPreventUnrecognizedSEL'` default is `pod 'TPreventUnrecognizedSEL/FastForwarding'`**
+**⚠️Use `pod 'TPreventUnrecognizedSEL'` default is `pod 'TPreventUnrecognizedSEL/NormalForwarding'`**
 
 #### Carthage
 
@@ -91,9 +89,9 @@ To integrate `TPreventUnrecognizedSEL` into your Xcode project using Carthage, s
 github "tobedefined/TPreventUnrecognizedSEL"
 ```
 
-Run `carthage update` to build the framework and drag the built `TPUSELFastForwarding.framework` or `TPUSELNormalForwarding.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built ~~`TPUSELFastForwarding.framework` or~~ `TPUSELNormalForwarding.framework` into your Xcode project.
 
-**Note: You can only use one of the two frameworks, `TPUSELFastForwarding.framework` or `TPUSELNormalForwarding.framework`.**
+**⚠️Note: You can only use `TPUSELNormalForwarding.framework`.**
 
 ### How to use
 
@@ -107,8 +105,6 @@ Import into the project without any action to take effect
 
 | Module and lang \ Import module mode |            Source File             |                            CocoaPods                             |                            Carthage                             |
 | :----------------------------------: | :--------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
-|     TPUSELFastForwarding & ObjC      |  #import "TPUSELFastForwarding.h"  |  #import &lt;TPreventUnrecognizedSEL/TPUSELFastForwarding.h&gt;  |   #import &lt;TPUSELFastForwarding/TPUSELFastForwarding.h&gt;   |
-|     TPUSELFastForwarding & Swift     |      add ⤴ in Bridging-Header     |                  import TPreventUnrecognizedSEL                  |                   import TPUSELFastForwarding                   |
 |    TPUSELNormalForwarding & ObjC     | #import "TPUSELNormalForwarding.h" | #import &lt;TPreventUnrecognizedSEL/TPUSELNormalForwarding.h&gt; | #import &lt;TPUSELNormalForwarding/TPUSELNormalForwarding.h&gt; |
 |    TPUSELNormalForwarding & Swift    |     add ⤴ in Bridging-Header      |                  import TPreventUnrecognizedSEL                  |                  import TPUSELNormalForwarding                  |
 
@@ -129,7 +125,7 @@ NSObject.setHandleUnrecognizedSELErrorBlock { (cls, selector, methodType) in
 }
 ```
 
-For some definitions: The following definitions and methods are in `NSObject+TPUSELFastForwarding.h` or `NSObject+TPUSELNormalForwarding.h`
+For some definitions: The following definitions and methods are in `NSObject+TPUSELNormalForwarding.h`
 
 ```objc
 typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
@@ -139,7 +135,7 @@ typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
 
 typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selector, UnrecognizedMethodType methodType);
 
-@interface NSObject (TPUSELFastForwarding) // or (TPUSELNormalForwarding)
+@interface NSObject (TPUSELNormalForwarding)
 
 + (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
 

@@ -35,12 +35,16 @@ TPreventUnrecognizedSEL
     - 所缺失的方法名；
     - 缺失的是对象方法还是类方法。
 
+**⚠️注意：你只可以使用`TPUSELNormalForwarding`，系统的某些方法使用了快速转发FastForwarding技术，为了防止覆盖系统方法，只可以使用默认转发NormalForwarding**
+
+**⚠️注意：TPUSELFastForwarding仅供参考，不可使用**
+
 ### 如何导入
 
 #### 源文件
 
-源文件中包含两个模块目录： `TPUSELFastForwarding` 和 `TPUSELNormalForwarding`；将对应模块目录中的`Sources`文件夹内部的所有文件拖入项目中即可
-**注意：你只可以使用其中一个模块进行使用，将对应模块目录中的Sources文件内部的所有文件拖入项目中即可**
+源文件中包含两个模块目录： `TPUSELNormalForwarding` ~~和 `TPUSELFastForwarding`~~ (系统的某些方法使用了快速转发FastForwarding，为了防止覆盖系统方法，只可以使用默认转发NormalForwarding) ；将对应模块目录中的`Sources`文件夹内部的所有文件拖入项目中即可
+**⚠️注意：你只可以使用`TPUSELNormalForwarding`，将对应模块目录中的Sources文件内部的所有文件拖入项目中即可**
 
 #### CocoaPods
 
@@ -53,13 +57,7 @@ $ gem install cocoapods
 要使用CocoaPods将`TPreventUnrecognizedSEL`集成到您的Xcode项目中，请在`Podfile`中加入：
 
 ```ruby
-# pod 'TPreventUnrecognizedSEL' 默认是使用 pod 'TPreventUnrecognizedSEL/FastForwarding'
-pod 'TPreventUnrecognizedSEL/FastForwarding'
-```
-
-或者加入
-
-```ruby
+# pod 'TPreventUnrecognizedSEL' 默认是使用 pod 'TPreventUnrecognizedSEL/NormalForwarding'
 pod 'TPreventUnrecognizedSEL/NormalForwarding'
 ```
 
@@ -69,9 +67,9 @@ pod 'TPreventUnrecognizedSEL/NormalForwarding'
 $ pod install
 ```
 
-**注意：你只可以使用其中一个subspec，`NormalForwarding`和`FastForwarding`二者只能选其一** 
+**⚠️注意：你只可以使用`NormalForwarding`** 
 
-**使用`pod 'TPreventUnrecognizedSEL'`默认是`pod 'TPreventUnrecognizedSEL/FastForwarding'`**
+**⚠️使用`pod 'TPreventUnrecognizedSEL'`默认是`pod 'TPreventUnrecognizedSEL/NormalForwarding'`**
 
 #### Carthage
 
@@ -91,9 +89,9 @@ $ brew install carthage
 github "tobedefined/TPreventUnrecognizedSEL"
 ```
 
-运行`carthage update`构建framework，并将编译的对应平台的`TPUSELFastForwarding.framework`或者`TPUSELNormalForwarding.framework`拖入Xcode项目中。
+运行`carthage update`构建framework，并将编译的对应平台的 ~~`TPUSELFastForwarding.framework`和~~ `TPUSELNormalForwarding.framework`，将`TPUSELNormalForwarding.framework`拖入Xcode项目中。
 
-**注意：你只可以使用其中一个framework，`TPUSELFastForwarding.framework`和`TPUSELNormalForwarding.framework`二者选一**
+**⚠️注意：你只可以使用`TPUSELNormalForwarding.framework`**
 
 ### 使用方法
 
@@ -107,8 +105,6 @@ github "tobedefined/TPreventUnrecognizedSEL"
 
 |   模块和语言 \ 导入模块方式        |               源文件               |                            CocoaPods                             |                            Carthage                             |
 | :----------------------------: | :--------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
-|  TPUSELFastForwarding & ObjC   |  #import "TPUSELFastForwarding.h"  |  #import &lt;TPreventUnrecognizedSEL/TPUSELFastForwarding.h&gt;  |   #import &lt;TPUSELFastForwarding/TPUSELFastForwarding.h&gt;   |
-|  TPUSELFastForwarding & Swift  |      add ⤴ in Bridging-Header     |                  import TPreventUnrecognizedSEL                  |                   import TPUSELFastForwarding                   |
 | TPUSELNormalForwarding & ObjC  | #import "TPUSELNormalForwarding.h" | #import &lt;TPreventUnrecognizedSEL/TPUSELNormalForwarding.h&gt; | #import &lt;TPUSELNormalForwarding/TPUSELNormalForwarding.h&gt; |
 | TPUSELNormalForwarding & Swift |     add ⤴ in Bridging-Header      |                  import TPreventUnrecognizedSEL                  |                  import TPUSELNormalForwarding                  |
 
@@ -130,7 +126,7 @@ NSObject.setHandleUnrecognizedSELErrorBlock { (cls, selector, methodType) in
 }
 ```
 
-关于一些定义：在`NSObject+TPUSELFastForwarding.h`或者`NSObject+TPUSELNormalForwarding.h`中有以下定义和方法
+关于一些定义：在`NSObject+TPUSELNormalForwarding.h`中有以下定义和方法
 
 ```objc
 typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
@@ -140,7 +136,7 @@ typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
 
 typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selector, UnrecognizedMethodType methodType);
 
-@interface NSObject (TPUSELFastForwarding) // 或(TPUSELNormalForwarding)
+@interface NSObject (TPUSELNormalForwarding)
 
 + (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
 
