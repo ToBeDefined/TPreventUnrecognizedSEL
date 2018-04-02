@@ -10,14 +10,16 @@
 #import <TPUSELFastForwarding/TPUSELFastForwarding.h>
 
 @interface TestFastForwardingOBJ: NSObject
+
 @end
 
 @implementation TestFastForwardingOBJ
+
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"Hello, Begin Test Fast Forwarding");
+        NSLog(@"Begin Test Fast Forwarding");
         [NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
             NSString *typeStr = @"Lost Class    Method";
             if (methodType == UnrecognizedMethodTypeInstanceMethod) {
