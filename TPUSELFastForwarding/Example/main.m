@@ -25,9 +25,11 @@ int main(int argc, const char * argv[]) {
             }
             NSLog(@"CLASS: %@, %@ ==> %@", NSStringFromClass(cls), typeStr, NSStringFromSelector(selector));
         }];
-        
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
         [[[TestFastForwardingOBJ alloc] init] performSelector:@selector(losted:instance:method:)];
         [TestFastForwardingOBJ performSelector:@selector(losted:class:method:)];
+#pragma clang diagnostic pop
         
         NSLog(@"Test Fast Forwarding Success");
     }
