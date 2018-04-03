@@ -65,23 +65,6 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 }
 
 + (BOOL)isCanFowardingFor:(Class)cls {
-    // is setting justForwardClassArray, will just forward the class(and subclass) inside of the justForwardClassArray
-    NSArray <NSString *> *justForwardClassArray = [NSObject justForwardClassArray];
-    if (justForwardClassArray.count > 0) {
-        for (NSObject *element in [NSObject justForwardClassArray]) {
-            Class justForwardCls;
-            if ([element isKindOfClass:[NSString class]]) {
-                justForwardCls = NSClassFromString((NSString *)element);
-            } else {
-                justForwardCls = (Class)element;
-            }
-            if ([cls isSubclassOfClass:justForwardCls]) {
-                return YES;
-            }
-        }
-        return NO;
-    }
-    
     if ([NSObject ignoreForwardNSNullClass] && [cls isSubclassOfClass:[NSNull class]]) {
         return NO;
     }
@@ -98,6 +81,22 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
         }
     }
     
+    // is setting justForwardClassArray, will just forward the class(and subclass) inside of the justForwardClassArray
+    NSArray *justForwardClassArray = [NSObject justForwardClassArray];
+    if (justForwardClassArray.count > 0) {
+        for (NSObject *element in justForwardClassArray) {
+            Class justForwardCls;
+            if ([element isKindOfClass:[NSString class]]) {
+                justForwardCls = NSClassFromString((NSString *)element);
+            } else {
+                justForwardCls = (Class)element;
+            }
+            if ([cls isSubclassOfClass:justForwardCls]) {
+                return YES;
+            }
+        }
+        return NO;
+    }
     return YES;
 }
 
