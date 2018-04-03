@@ -101,23 +101,14 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 }
 
 + (Class)getProtectorClass {
-    Class protectorCls = NSClassFromString(@"__TProtectorClass");
-    if (!protectorCls) {
-        protectorCls = objc_allocateClassPair([NSObject class], "__TProtectorClass", 0);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class protectorCls = objc_allocateClassPair([NSObject class], "__TProtectorClass", 0);
         objc_registerClassPair(protectorCls);
-    }
+    });
+    Class protectorCls = NSClassFromString(@"__TProtectorClass");
     return protectorCls;
 }
-
-
-//+ (instancetype)getProtectorInstance {
-//    static id __t_protector_instance;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        __t_protector_instance = [[[self getProtectorClass] alloc] init];
-//    });
-//    return __t_protector_instance;
-//}
 
 #pragma mark - ForwardInvocation
 
