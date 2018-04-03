@@ -8,15 +8,17 @@
 
 Pod::Spec.new do |s|
     s.name                      = 'TPreventUnrecognizedSEL'
-    s.version                   = '1.0.2'
+    s.version                   = '1.1.0'
     s.summary                   = <<-DESC
-    Use TPreventUnrecognizedSEL can prevent the unrecognized selector crash. ⚠️You just can use NormalForwarding.
+    Use TPreventUnrecognizedSEL can prevent the unrecognized selector crash.
+    ⚠️You just can use one of NormalForwarding and FastForwarding⚠️.
                                     DESC
     s.description               = <<-DESC
-    Use TPreventUnrecognizedSEL can make you project prevent the unrecognized selector crash.
-    You just can use `NormalForwarding` subspec, because some of the system functions are used FastForwarding.
-    In podfile `pod 'TPreventUnrecognizedSEL'` or `pod 'TPreventUnrecognizedSEL/NormalForwarding'` to use `NormalForwarding` subspec;
-    !!! ⚠️Remember, **JUST USE `NormalForwarding` subspec** ⚠️!!!
+    You just can use `FastForwarding` subspec **or**  use `NormalForwarding` subspec, you can not use both them at the same time.
+    In podfile `pod 'TPreventUnrecognizedSEL/NormalForwarding'` to use `NormalForwarding` subspec;
+    In podfile `pod 'TPreventUnrecognizedSEL/FastForwarding'` to use `FastForwarding` subspec;
+    !!!  !!!
+    !!! ⚠️Remember, **JUST USE ONE OF THEM** ⚠️!!!
     github : https://github.com/tobedefined/TPreventUnrecognizedSEL
                                     DESC
     s.homepage                  = 'https://github.com/tobedefined/TPreventUnrecognizedSEL'
@@ -32,14 +34,14 @@ Pod::Spec.new do |s|
     s.tvos.deployment_target    = '9.0'
     s.watchos.deployment_target = '1.0'
   
-    # s.subspec 'FastForwarding' do |ss|
-    #   ss.public_header_files    = 'TPUSELFastForwarding/Sources/*.h'
-    #   ss.source_files           = 'TPUSELFastForwarding/Sources/*.{h,m}'
-    # end
-  
     s.subspec 'NormalForwarding' do |ss|
         ss.public_header_files  = 'TPUSELNormalForwarding/Sources/*.h'
         ss.source_files         = 'TPUSELNormalForwarding/Sources/*.{h,m}'
     end
+
+    s.subspec 'FastForwarding' do |ss|
+      ss.public_header_files    = 'TPUSELFastForwarding/Sources/*.h'
+      ss.source_files           = 'TPUSELFastForwarding/Sources/*.{h,m}'
+    end
 end
-  
+

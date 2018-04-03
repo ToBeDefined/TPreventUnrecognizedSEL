@@ -35,16 +35,13 @@ TPreventUnrecognizedSEL
     - 所缺失的方法名；
     - 缺失的是对象方法还是类方法。
 
-**⚠️注意：你只可以使用`TPUSELNormalForwarding`，系统的某些方法使用了快速转发FastForwarding技术，为了防止覆盖系统方法，只可以使用默认转发NormalForwarding**
-
-**⚠️注意：TPUSELFastForwarding仅供参考，不可使用**
-
 ### 如何导入
 
 #### 源文件
 
-源文件中包含两个模块目录： `TPUSELNormalForwarding` ~~和 `TPUSELFastForwarding`~~ (系统的某些方法使用了快速转发FastForwarding，为了防止覆盖系统方法，只可以使用默认转发NormalForwarding) ；将对应模块目录中的`Sources`文件夹内部的所有文件拖入项目中即可
-**⚠️注意：你只可以使用`TPUSELNormalForwarding`，将对应模块目录中的Sources文件内部的所有文件拖入项目中即可**
+源文件中包含两个模块目录： `TPUSELNormalForwarding` 和 `TPUSELFastForwarding`；将对应模块目录中的`Sources`文件夹内部的所有文件拖入项目中即可
+
+**⚠️注意：你只可以使用其中一个模块进行使用，将对应模块目录中的Sources文件内部的所有文件拖入项目中即可，推荐使用`TPUSELNormalForwarding`，因为系统的某些方法使用了快速转发FastForwarding技术**
 
 #### CocoaPods
 
@@ -61,13 +58,19 @@ $ gem install cocoapods
 pod 'TPreventUnrecognizedSEL/NormalForwarding'
 ```
 
+或者加入
+
+```ruby
+pod 'TPreventUnrecognizedSEL/FastForwarding'
+```
+
 然后运行一下命令:
 
 ```bash
 $ pod install
 ```
 
-**⚠️注意：你只可以使用`NormalForwarding`** 
+**⚠️注意：你只可以使用其中一个subspec，`NormalForwarding` 和 `FastForwarding` 二者只能选其一** 
 
 **⚠️使用`pod 'TPreventUnrecognizedSEL'`默认是`pod 'TPreventUnrecognizedSEL/NormalForwarding'`**
 
@@ -89,15 +92,15 @@ $ brew install carthage
 github "tobedefined/TPreventUnrecognizedSEL"
 ```
 
-运行`carthage update`构建framework，并将编译的对应平台的 ~~`TPUSELFastForwarding.framework`和~~ `TPUSELNormalForwarding.framework`，将`TPUSELNormalForwarding.framework`拖入Xcode项目中。
+运行`carthage update`构建framework，并将编译的对应平台的`TPUSELNormalForwarding.framework`或者`TPUSELFastForwarding.framework`拖入Xcode项目中。
 
-**⚠️注意：你只可以使用`TPUSELNormalForwarding.framework`**
+**⚠️注意：你只可以使用其中一个framework，`TPUSELNormalForwarding.framework` 和 `TPUSELFastForwarding.framework`二者选一**
 
 ### 使用方法
 
 #### 简单使用
 
-导入项目之后不用处理任何操作即可生效
+导入项目之后简单设置对哪些Class进行forwarding即可。
 
 #### 运行错误信息获取
 
@@ -107,26 +110,45 @@ github "tobedefined/TPreventUnrecognizedSEL"
 | :----------------------------: | :--------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
 | TPUSELNormalForwarding & ObjC  | #import "TPUSELNormalForwarding.h" | #import &lt;TPreventUnrecognizedSEL/TPUSELNormalForwarding.h&gt; | #import &lt;TPUSELNormalForwarding/TPUSELNormalForwarding.h&gt; |
 | TPUSELNormalForwarding & Swift |     add ⤴ in Bridging-Header      |                  import TPreventUnrecognizedSEL                  |                  import TPUSELNormalForwarding                  |
+|  TPUSELFastForwarding & ObjC   |  #import "TPUSELFastForwarding.h"  |  #import &lt;TPreventUnrecognizedSEL/TPUSELFastForwarding.h&gt;  |   #import &lt;TPUSELFastForwarding/TPUSELFastForwarding.h&gt;   |
+|  TPUSELFastForwarding & Swift  |      add ⤴ in Bridging-Header     |                  import TPreventUnrecognizedSEL                  |                   import TPUSELFastForwarding                   |
 
-##### 设置Block
+##### 设置forwarding以及Block
 
 在APP的 **`main.m`文件的`main()`函数中** 或者 **在APP的`didFinishLaunching`方法中** 加入以下代码可以获得缺失方法的具体信息：
 
+###### TPUSELNormalForwarding
+
 ```objc
-[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
+// 设置不对NSNull及其子类进行处理，默认为NO
+[NSObject setIgnoreForwardNSNullClass:YES];
+// 设置不对数组中的类及其子类进行处理（数组中的类名可以为Class类型也可以为NSString类型），默认不忽略任何类
+[NSObject setIgnoreForwardClassArray:@[@"SomeIgnoreClass1", [SomeIgnoreClass2 Class]]];
+// 设置仅处理数组中的类及其子类（数组中的类名可以为Class类型也可以为NSString类型），默认处理所有类
+[NSObject setJustForwardClassArray:@[@"SomeClass1", [SomeClass2 Class]]];
+// 设置处理之后的回调操作
+[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType, NSArray<NSString *> * _Nonnull callStackSymbols) {
     // 在这里写你要做的事情
     // 比如上传到服务器或者打印log等
 }];
 ```
 
-```swift
-NSObject.setHandleUnrecognizedSELErrorBlock { (cls, selector, methodType) in
-    // 在这里写你要做的事情
-    // 比如上传到服务器或者打印log等
-}
+###### TPUSELFastForwarding
+
+```objc
+// 设置仅处理数组中的类及其子类（数组中的类名可以为Class类型也可以为NSString类型），默认不处理任何类
+// 设置处理之后的回调操作
+[NSObject setJustForwardClassArray:@[@"SomeClass1", [SomeClass2 Class]]
+           handleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType, NSArray<NSString *> * _Nonnull callStackSymbols) {
+              // 在这里写你要做的事情
+              // 比如上传到服务器或者打印log等
+           }];
 ```
 
-关于一些定义：在`NSObject+TPUSELNormalForwarding.h`中有以下定义和方法
+
+##### 一些定义
+
+在`NSObject+TPUSELFastForwarding.h`或者`NSObject+TPUSELNormalForwarding.h`中有以下定义和方法
 
 ```objc
 typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
@@ -134,17 +156,14 @@ typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
     UnrecognizedMethodTypeInstanceMethod    = 2,
 };
 
-typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selector, UnrecognizedMethodType methodType);
-
-@interface NSObject (TPUSELNormalForwarding)
-
-+ (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
-
-@end
+typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls,
+                                                            SEL selector,
+                                                            UnrecognizedMethodType methodType,
+                                                            NSArray<NSString *> *callStackSymbols);
 ```
 
 - `cls`: `Class`类型；为缺失方法的类或对象的Class，可使用`NSStringFromClass(cls)`返回类名字符串
 - `selector`: `SEL`类型；为所缺失的方法名，可使用`NSStringFromSelector(selector)`返回方法名的字符串
 - `methodType`: `UnrecognizedMethodType`类型；为所缺失的方法类型（类方法or对象方法）
-
+- `callStackSymbols`: `NSArray<NSString *> *`类型；为调用栈信息
 

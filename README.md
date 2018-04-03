@@ -35,17 +35,13 @@ TPreventUnrecognizedSEL
     - The name of the missing method; 
     - The missing object method or class method.
 
-**⚠️Note: You can only use `TPUSELNormalForwarding`, some methods of the system use fast forwarding technology, in order to prevent overwriting system methods, you can only use the normal forwarding**
-
-**⚠️Note: TPUSELFastForwarding is for reference only and is not to be used**
-
 ### Installation
 
 #### Source File
 
-The source file contains two module directories: `TPUSELNormalForwarding` ~~and `TPUSELFastForwarding`~~ (some methods of the system use fast forwarding technology, in order to prevent overwriting system methods, you can only use the normal forwarding) ; Drag all the files inside the `Sources` folder in the corresponding module directory into you project.
+The source file contains two module directories: `TPUSELNormalForwarding` and `TPUSELFastForwarding`; Drag all the files inside the `Sources` folder in the corresponding module directory into you project.
 
-**⚠️Note: you can only use `TPUSELNormalForwarding`, the module directory corresponding to all the files inside the Sources file can be dragged into the project.**
+**⚠️Note: you can only use one of the modules to use, the module directory corresponding to all the files inside the Sources file can be dragged into the project. It is recommended to use `TPUSELNormalForwarding` because some methods of the system use fast forwarding**
 
 #### CocoaPods
 
@@ -62,13 +58,19 @@ To integrate `TPreventUnrecognizedSEL` into your Xcode project using CocoaPods, 
 pod 'TPreventUnrecognizedSEL/NormalForwarding'
 ```
 
+or this:
+
+```ruby
+pod 'TPreventUnrecognizedSEL/FastForwarding'
+```
+
 Then, run the following command:
 
 ```bash
 $ pod install
 ```
 
-**⚠️Note: you can only use `NormalForwarding`**
+**⚠️Note: you can only use one of the subspec, `NormalForwarding` or `FastForwarding`**
 
 **⚠️Use `pod 'TPreventUnrecognizedSEL'` default is `pod 'TPreventUnrecognizedSEL/NormalForwarding'`**
 
@@ -89,15 +91,15 @@ To integrate `TPreventUnrecognizedSEL` into your Xcode project using Carthage, s
 github "tobedefined/TPreventUnrecognizedSEL"
 ```
 
-Run `carthage update` to build the framework and drag the built ~~`TPUSELFastForwarding.framework` or~~ `TPUSELNormalForwarding.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `TPUSELNormalForwarding.framework` or `TPUSELFastForwarding.framework` into your Xcode project.
 
-**⚠️Note: You can only use `TPUSELNormalForwarding.framework`.**
+**⚠️Note: You can only use one of the two frameworks, `TPUSELNormalForwarding.framework` or `TPUSELFastForwarding.framework`.**
 
 ### How to use
 
 #### Simple Use
 
-Import into the project without any action to take effect
+After the project is imported, simply set which Classes to forward.
 
 #### Get Run error message 
 
@@ -107,25 +109,45 @@ Import into the project without any action to take effect
 | :----------------------------------: | :--------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------: |
 |    TPUSELNormalForwarding & ObjC     | #import "TPUSELNormalForwarding.h" | #import &lt;TPreventUnrecognizedSEL/TPUSELNormalForwarding.h&gt; | #import &lt;TPUSELNormalForwarding/TPUSELNormalForwarding.h&gt; |
 |    TPUSELNormalForwarding & Swift    |     add ⤴ in Bridging-Header      |                  import TPreventUnrecognizedSEL                  |                  import TPUSELNormalForwarding                  |
+|     TPUSELFastForwarding & ObjC      |  #import "TPUSELFastForwarding.h"  |  #import &lt;TPreventUnrecognizedSEL/TPUSELFastForwarding.h&gt;  |   #import &lt;TPUSELFastForwarding/TPUSELFastForwarding.h&gt;   |
+|     TPUSELFastForwarding & Swift     |      add ⤴ in Bridging-Header     |                  import TPreventUnrecognizedSEL                  |                   import TPUSELFastForwarding                   |
 
-##### Set Block
+##### Set Forwarding and Block
 
 In the  **`main()` function of the APP's `main.m` file**  or  **in the APP's `didFinishLaunching` method**  add the following code to get the specific information about the missing method:
+
+###### TPUSELNormalForwarding
+
 ```objc
-[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
+// Setting does not process NSNull and its subclasses, the default is NO
+[NSObject setIgnoreForwardNSNullClass:YES];
+// Set the class and its subclasses in the array to not be processed (the class name in the array can be a Class type or an NSString type). By default, no class is ignored.
+[NSObject setIgnoreForwardClassArray:@[@"SomeIgnoreClass1", [SomeIgnoreClass2 Class]]];
+// Set to process only the classes in the array and their subclasses (the class name in the array can be either a Class or an NSString type). By default, all classes are handled.
+[NSObject setJustForwardClassArray:@[@"SomeClass1", [SomeClass2 Class]]];
+// Set callback after processing
+[NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType, NSArray<NSString *> * _Nonnull callStackSymbols) {
     // DO SOMETHING
     // like upload to server or print log or others
 }];
 ```
 
-```swift
-NSObject.setHandleUnrecognizedSELErrorBlock { (cls, selector, methodType) in
-    // DO SOMETHING
-    // like upload to server or print log or others
-}
+
+###### TPUSELFastForwarding
+
+```objc
+// Set to process only the classes in the array and their subclasses (the class name in the array can be either a Class or an NSString type). By default, all classes are NOT handled.
+// Set callback after processing
+[NSObject setJustForwardClassArray:@[@"SomeClass1", [SomeClass2 Class]]
+   handleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType, NSArray<NSString *> * _Nonnull callStackSymbols) {
+       // DO SOMETHING
+       // like upload to server or print log or others
+   }];
 ```
 
-For some definitions: The following definitions and methods are in `NSObject+TPUSELNormalForwarding.h`
+##### Some Definitions
+
+The following definitions and methods are in `NSObject+TPUSELFastForwarding.h` or `NSObject+TPUSELNormalForwarding.h`
 
 ```objc
 typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
@@ -133,16 +155,15 @@ typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
     UnrecognizedMethodTypeInstanceMethod    = 2,
 };
 
-typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selector, UnrecognizedMethodType methodType);
+typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls,
+                                                            SEL selector,
+                                                            UnrecognizedMethodType methodType,
+                                                            NSArray<NSString *> *callStackSymbols);
 
-@interface NSObject (TPUSELNormalForwarding)
-
-+ (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
-
-@end
 ```
 
 - `cls`: `Class` type; the Class of missing instance method or class method, `NSStringFromClass(cls)` can be used to return the NSString for the class name
 - `selector`: `SEL` type; the missing method name, `NSStringFromSelector(selector)` can be used to return the NSString for the method name
 - `methodType`: `UnrecognizedMethodType` type; for the missing method type (class method or object method)
+- `callStackSymbols`: `NSArray<NSString *> *` type; call stack infomations
 
