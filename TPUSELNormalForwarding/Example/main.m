@@ -24,7 +24,7 @@ int main(int argc, const char * argv[]) {
                 typeStr = @"Lost Instance Method";
             }
             NSLog(@"CLASS: %@, %@ ==> %@", NSStringFromClass(cls), typeStr, NSStringFromSelector(selector));
-            // NSLog(@"%@", callStackSymbols);
+             NSLog(@"%@", callStackSymbols);
         }];
         
         

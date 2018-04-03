@@ -99,7 +99,11 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
                         "v@:");
         HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
         if (handleBlock != nil) {
-            handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod, [NSThread callStackSymbols]);
+            NSArray <NSString *>*callStackSymbols = @[@"The system version is too low."];
+            if (@available(iOS 4.0, tvOS 9.0, macOS 10.6, watchOS 2.0, *)) {
+                callStackSymbols = [NSThread callStackSymbols];
+            }
+            handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod, callStackSymbols);
         }
         
         return [NSObject getProtectorInstance];
@@ -119,7 +123,11 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
                         "v@:");
         HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
         if (handleBlock != nil) {
-            handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod, [NSThread callStackSymbols]);
+            NSArray <NSString *>*callStackSymbols = @[@"The system version is too low."];
+            if (@available(iOS 4.0, tvOS 9.0, macOS 10.6, watchOS 2.0, *)) {
+                callStackSymbols = [NSThread callStackSymbols];
+            }
+            handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod, callStackSymbols);
         }
         
         return [NSObject getProtectorClass];
