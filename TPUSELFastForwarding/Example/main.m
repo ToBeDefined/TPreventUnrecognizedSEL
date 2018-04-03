@@ -20,13 +20,15 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSLog(@"Begin Test Fast Forwarding");
-        [NSObject setHandleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType) {
-            NSString *typeStr = @"Lost Class    Method";
-            if (methodType == UnrecognizedMethodTypeInstanceMethod) {
-                typeStr = @"Lost Instance Method";
-            }
-            NSLog(@"CLASS: %@, %@ ==> %@", NSStringFromClass(cls), typeStr, NSStringFromSelector(selector));
-        }];
+        [NSObject setJustForwardClassArray:@[@"TestFastForwardingOBJ"]
+           handleUnrecognizedSELErrorBlock:^(Class  _Nonnull __unsafe_unretained cls, SEL  _Nonnull selector, UnrecognizedMethodType methodType, NSArray<NSString *> * _Nonnull callStackSymbols) {
+               NSString *typeStr = @"Lost Class    Method";
+               if (methodType == UnrecognizedMethodTypeInstanceMethod) {
+                   typeStr = @"Lost Instance Method";
+               }
+               NSLog(@"CLASS: %@, %@ ==> %@", NSStringFromClass(cls), typeStr, NSStringFromSelector(selector));
+               // NSLog(@"%@", callStackSymbols);
+           }];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
         [[[TestFastForwardingOBJ alloc] init] performSelector:@selector(losted:instance:method:)];

@@ -8,7 +8,6 @@
 
 #import "NSObject+TPUSELFastForwarding.h"
 #import <objc/runtime.h>
-#import "TUndertakeObject.h"
 
 void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 
@@ -16,12 +15,64 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 
 #pragma mark - HandleUnrecognizedSELErrorBlock
 
-+ (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock {
-    objc_setAssociatedObject(self, @selector(handleUnrecognizedSELErrorBlock), handleBlock, OBJC_ASSOCIATION_RETAIN);
+
+
++ (void)setJustForwardClassArray:(NSArray *)forwardClassArray
+ handleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock {
+    objc_setAssociatedObject(self,
+                             @selector(handleUnrecognizedSELErrorBlock),
+                             handleBlock,
+                             OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self,
+                             @selector(justForwardClassArray),
+                             forwardClassArray,
+                             OBJC_ASSOCIATION_RETAIN);
 }
 
 + (HandleUnrecognizedSELErrorBlock)handleUnrecognizedSELErrorBlock {
-    return objc_getAssociatedObject(self, @selector(handleUnrecognizedSELErrorBlock));
+    return objc_getAssociatedObject(self,
+                                    _cmd);
+}
+
++ (NSArray *)justForwardClassArray {
+    return (NSArray *)objc_getAssociatedObject(self,
+                                               _cmd);
+}
+
++ (BOOL)isCanFowardingFor:(Class)cls {
+    // is setting justForwardClassArray, will just forward the class(and subclass) inside of the justForwardClassArray
+    for (NSObject *element in [NSObject justForwardClassArray]) {
+        Class justForwardCls;
+        if ([element isKindOfClass:[NSString class]]) {
+            justForwardCls = NSClassFromString((NSString *)element);
+        } else {
+            justForwardCls = (Class)element;
+        }
+        if ([cls isSubclassOfClass:justForwardCls]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
++ (Class)getProtectorClass {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class protectorCls = objc_allocateClassPair([NSObject class], "__TProtectorClass", 0);
+        objc_registerClassPair(protectorCls);
+    });
+    Class protectorCls = NSClassFromString(@"__TProtectorClass");
+    return protectorCls;
+}
+
+
++ (instancetype)getProtectorInstance {
+    static id __t_protector_instance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        __t_protector_instance = [[[self getProtectorClass] alloc] init];
+    });
+    return __t_protector_instance;
 }
 
 #pragma mark - FastForwarding
@@ -38,42 +89,42 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 
 - (id)__t_forwardingTargetForSelector:(SEL)aSelector {
     if ([self respondsToSelector:aSelector]) {
-        return self;
+        return [self __t_forwardingTargetForSelector:aSelector];
     }
     
-    if (![[TUndertakeObject sharedInstance] respondsToSelector:aSelector]) {
-        class_addMethod([TUndertakeObject class],
+    if ([NSObject isCanFowardingFor:[self class]]) {
+        class_addMethod([NSObject getProtectorClass],
                         aSelector,
                         (IMP)__c_t_resolveLostedMethod,
                         "v@:");
+        HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
+        if (handleBlock != nil) {
+            handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod, [NSThread callStackSymbols]);
+        }
+        
+        return [NSObject getProtectorInstance];
     }
-    
-    HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
-    if (handleBlock != nil) {
-        handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod);
-    }
-    
-    return [TUndertakeObject sharedInstance];
+    return [self __t_forwardingTargetForSelector:aSelector];
 }
 
 + (id)__t_forwardingTargetForSelector:(SEL)aSelector {
     if ([self respondsToSelector:aSelector]) {
-        return self;
+        return [self __t_forwardingTargetForSelector:aSelector];
     }
     
-    if (![TUndertakeObject respondsToSelector:aSelector]) {
-        class_addMethod(objc_getMetaClass(class_getName([TUndertakeObject class])),
+    if ([NSObject isCanFowardingFor:self]) {
+        class_addMethod(objc_getMetaClass(class_getName([NSObject getProtectorClass])),
                         aSelector,
                         (IMP)__c_t_resolveLostedMethod,
                         "v@:");
+        HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
+        if (handleBlock != nil) {
+            handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod, [NSThread callStackSymbols]);
+        }
+        
+        return [NSObject getProtectorClass];
     }
-    
-    HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
-    if (handleBlock != nil) {
-        handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod);
-    }
-    
-    return [TUndertakeObject class];
+    return [self __t_forwardingTargetForSelector:aSelector];
 }
 
 @end

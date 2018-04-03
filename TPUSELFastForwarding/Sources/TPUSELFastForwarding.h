@@ -12,9 +12,7 @@
 FOUNDATION_EXPORT double TPUSELFastForwardingVersionNumber;
 FOUNDATION_EXPORT const unsigned char TPUSELFastForwardingVersionString[];
 #import <TPUSELFastForwarding/NSObject+TPUSELFastForwarding.h>
-#import <TPUSELFastForwarding/TUndertakeObject.h>
 #else
 #import "NSObject+TPUSELFastForwarding.h"
-#import "TUndertakeObject.h"
 #endif
 

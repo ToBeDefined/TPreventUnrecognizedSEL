@@ -8,23 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3F5DEC851FC85E2C004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
-		3F5DEC861FC85E2C004254F7 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
 		3F5DEC871FC85E31004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
-		3F5DEC881FC85E31004254F7 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
 		3F5DEC891FC85E36004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
-		3F5DEC8A1FC85E36004254F7 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
 		3F5DECBD1FC86319004254F7 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F5DECBE1FC86319004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F5DECBF1FC86319004254F7 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F5DECC01FC8632D004254F7 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F5DECC11FC8632D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F5DECC21FC8632D004254F7 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F5DECC31FC8633D004254F7 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F5DECC41FC8633D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F5DECC51FC8633D004254F7 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDC63231FC7DD2100524907 /* TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FDC63531FC7DF3D00524907 /* TUndertakeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FDC63541FC7DF3D00524907 /* TUndertakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */; };
 		3FDC63551FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FDC63561FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */; };
 		3FF1465C1FC870C70023D67B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF1465B1FC870C70023D67B /* main.m */; };
@@ -61,8 +53,6 @@
 		3FDC631E1FC7DD2100524907 /* TPUSELFastForwarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPUSELFastForwarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPUSELFastForwarding.h; sourceTree = "<group>"; };
 		3FDC63221FC7DD2100524907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUndertakeObject.h; sourceTree = "<group>"; };
-		3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUndertakeObject.m; sourceTree = "<group>"; };
 		3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPUSELFastForwarding.h"; sourceTree = "<group>"; };
 		3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPUSELFastForwarding.m"; sourceTree = "<group>"; };
 		3FF146591FC870C70023D67B /* TPUSELFastForwarding Example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TPUSELFastForwarding Example"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,8 +128,6 @@
 				3FDC63211FC7DD2100524907 /* TPUSELFastForwarding.h */,
 				3FDC63511FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h */,
 				3FDC63521FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m */,
-				3FDC634F1FC7DF3D00524907 /* TUndertakeObject.h */,
-				3FDC63501FC7DF3D00524907 /* TUndertakeObject.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -169,7 +157,6 @@
 			files = (
 				3F5DECBD1FC86319004254F7 /* TPUSELFastForwarding.h in Headers */,
 				3F5DECBE1FC86319004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */,
-				3F5DECBF1FC86319004254F7 /* TUndertakeObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +166,6 @@
 			files = (
 				3F5DECC01FC8632D004254F7 /* TPUSELFastForwarding.h in Headers */,
 				3F5DECC11FC8632D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */,
-				3F5DECC21FC8632D004254F7 /* TUndertakeObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +175,6 @@
 			files = (
 				3F5DECC31FC8633D004254F7 /* TPUSELFastForwarding.h in Headers */,
 				3F5DECC41FC8633D004254F7 /* NSObject+TPUSELFastForwarding.h in Headers */,
-				3F5DECC51FC8633D004254F7 /* TUndertakeObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDC63551FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.h in Headers */,
-				3FDC63531FC7DF3D00524907 /* TUndertakeObject.h in Headers */,
 				3FDC63231FC7DD2100524907 /* TPUSELFastForwarding.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,7 +370,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5DEC851FC85E2C004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */,
-				3F5DEC861FC85E2C004254F7 /* TUndertakeObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +378,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5DEC871FC85E31004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */,
-				3F5DEC881FC85E31004254F7 /* TUndertakeObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5DEC891FC85E36004254F7 /* NSObject+TPUSELFastForwarding.m in Sources */,
-				3F5DEC8A1FC85E36004254F7 /* TUndertakeObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +393,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDC63541FC7DF3D00524907 /* TUndertakeObject.m in Sources */,
 				3FDC63561FC7DF3D00524907 /* NSObject+TPUSELFastForwarding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
