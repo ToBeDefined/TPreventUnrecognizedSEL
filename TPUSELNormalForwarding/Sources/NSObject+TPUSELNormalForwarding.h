@@ -15,11 +15,25 @@ typedef NS_ENUM(NSUInteger, UnrecognizedMethodType) {
     UnrecognizedMethodTypeInstanceMethod    = 2,
 };
 
-typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls, SEL selector, UnrecognizedMethodType methodType);
+typedef void (^ __nullable HandleUnrecognizedSELErrorBlock)(Class cls,
+                                                            SEL selector,
+                                                            UnrecognizedMethodType methodType,
+                                                            NSArray<NSString *> *callStackSymbols);
 
 @interface NSObject (TPUSELNormalForwarding)
 
 + (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock;
+
+// Just Forward Class(and Subclass) inside of the forwardClassArray
+// forwardClassArray's Element can be `NSString *` or `Class`
++ (void)setJustForwardClassArray:(NSArray *)forwardClassArray;
+
+// ignore NSNull Class and Subclass
++ (void)setIgnoreForwardNSNullClass:(BOOL)ignoreNSNull;
+
+// ignore Class(and Subclass) inside of the ignoreClassArray
+// ignoreClassArray's Element can be `NSString *` or `Class`
++ (void)setIgnoreForwardClassArray:(NSArray *)ignoreClassArray;
 
 @end
 
