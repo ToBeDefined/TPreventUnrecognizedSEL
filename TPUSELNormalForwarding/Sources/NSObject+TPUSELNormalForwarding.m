@@ -9,8 +9,6 @@
 #import "NSObject+TPUSELNormalForwarding.h"
 #import <objc/runtime.h>
 
-void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
-
 @implementation NSObject (TPUSELNormalForwarding)
 
 #pragma mark - HandleUnrecognizedSELErrorBlock
@@ -100,15 +98,6 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
     return YES;
 }
 
-+ (Class)getProtectorClass {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class protectorCls = objc_allocateClassPair([NSObject class], "__TProtectorClass", 0);
-        objc_registerClassPair(protectorCls);
-    });
-    Class protectorCls = NSClassFromString(@"__TProtectorClass");
-    return protectorCls;
-}
 
 #pragma mark - ForwardInvocation
 
@@ -136,10 +125,6 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
         return signature;
     }
     
-    class_addMethod([NSObject getProtectorClass],
-                    aSelector,
-                    (IMP)__c_t_resolveLostedMethod,
-                    "v@:");
     HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
     if (handleBlock != nil) {
         NSArray <NSString *>*callStackSymbols = @[@"The system version is too low."];
@@ -148,6 +133,7 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
         }
         handleBlock([self class], aSelector, UnrecognizedMethodTypeInstanceMethod, callStackSymbols);
     }
+    
     return [NSMethodSignature signatureWithObjCTypes:"v@:"];
 }
 
@@ -172,10 +158,6 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
         return signature;
     }
     
-    class_addMethod(objc_getMetaClass(class_getName([NSObject getProtectorClass])),
-                    aSelector,
-                    (IMP)__c_t_resolveLostedMethod,
-                    "v@:");
     HandleUnrecognizedSELErrorBlock handleBlock = [NSObject handleUnrecognizedSELErrorBlock];
     if (handleBlock != nil) {
         NSArray <NSString *>*callStackSymbols = @[@"The system version is too low."];
@@ -184,6 +166,7 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
         }
         handleBlock([self class], aSelector, UnrecognizedMethodTypeClassMethod, callStackSymbols);
     }
+    
     return [NSMethodSignature signatureWithObjCTypes:"v@:"];
 }
 
