@@ -19,7 +19,7 @@ TPreventUnrecognizedSEL
 
 [中文文档](README_CN.md)
 
-[TPreventUnrecognizedSEL's Principle](http://tbd.ink/2017/11/26/iOS/170112601.TPreventUnrecognizedSEL%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86/index/)
+[TPreventUnrecognizedSEL's Principle](http://tbd.ink/2017/11/26/iOS/17112601.TPreventUnrecognizedSEL%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%E4%BB%A5%E5%8F%8A%E5%8E%9F%E7%90%86/index/)
 
 </div>
 

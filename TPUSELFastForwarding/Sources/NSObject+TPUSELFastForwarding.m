@@ -13,9 +13,7 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 
 @implementation NSObject (TPUSELFastForwarding)
 
-#pragma mark - HandleUnrecognizedSELErrorBlock
-
-
+#pragma mark - HandleUnrecognizedSELErrorBlock & Setting
 
 + (void)setJustForwardClassArray:(NSArray *)forwardClassArray
  handleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock {

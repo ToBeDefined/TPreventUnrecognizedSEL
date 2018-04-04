@@ -11,7 +11,7 @@
 
 @implementation NSObject (TPUSELNormalForwarding)
 
-#pragma mark - HandleUnrecognizedSELErrorBlock
+#pragma mark - HandleUnrecognizedSELErrorBlock & Setting
 
 + (void)setHandleUnrecognizedSELErrorBlock:(HandleUnrecognizedSELErrorBlock)handleBlock {
     objc_setAssociatedObject(self,
