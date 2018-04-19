@@ -9,6 +9,63 @@
 #import "NSObject+TPUSELNormalForwarding.h"
 #import <objc/runtime.h>
 
+
+#pragma mark - Safe Exchange Method
+#pragma mark -
+
+static inline
+void __tp_normal_forward_exchange_instance_method(Class cls, SEL originalSel, SEL swizzledSel) {
+    Method originalMethod = class_getInstanceMethod(cls, originalSel);
+    Method swizzledMethod = class_getInstanceMethod(cls, swizzledSel);
+    
+    // 交换实现进行添加函数
+    BOOL addOriginSELSuccess = class_addMethod(cls,
+                                               originalSel,
+                                               method_getImplementation(swizzledMethod),
+                                               method_getTypeEncoding(swizzledMethod));
+    BOOL addSwizzlSELSuccess = class_addMethod(cls,
+                                               swizzledSel,
+                                               method_getImplementation(originalMethod),
+                                               method_getTypeEncoding(originalMethod));
+    // 全都添加成功，返回
+    if (addOriginSELSuccess && addSwizzlSELSuccess) {
+        return;
+    }
+    // 全都添加失败，已经添加过了方法，交换
+    if (!addOriginSELSuccess && !addSwizzlSELSuccess) {
+        method_exchangeImplementations(originalMethod,
+                                       swizzledMethod);
+        return;
+    }
+    // addOriginSELSuccess 成功，addSwizzlSELSuccess 失败，replace SwizzlSel
+    if (addOriginSELSuccess && !addSwizzlSELSuccess) {
+        class_replaceMethod(cls,
+                            swizzledSel,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+        return;
+    }
+    // addSwizzlSELSuccess 成功，addOriginSELSuccess 失败，replace originSEL
+    if (!addOriginSELSuccess && addSwizzlSELSuccess) {
+        class_replaceMethod(cls,
+                            originalSel,
+                            method_getImplementation(swizzledMethod),
+                            method_getTypeEncoding(swizzledMethod));
+        return;
+    }
+}
+
+static inline
+void __tp_normal_forward_exchange_class_method(Class cls, SEL originalSel, SEL swizzledSel) {
+    __tp_normal_forward_exchange_instance_method(objc_getMetaClass(object_getClassName(cls)),
+                                              originalSel,
+                                              swizzledSel);
+}
+
+
+#pragma mark - Implementation Replace
+#pragma mark -
+
 @implementation NSObject (TPUSELNormalForwarding)
 
 #pragma mark - HandleUnrecognizedSELErrorBlock & Setting
@@ -104,14 +161,18 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        method_exchangeImplementations(class_getInstanceMethod(self, @selector(methodSignatureForSelector:)),
-                                       class_getInstanceMethod(self, @selector(__t_methodSignatureForSelector:)));
-        method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardInvocation:)),
-                                       class_getInstanceMethod(self, @selector(__t_forwardInvocation:)));
-        method_exchangeImplementations(class_getClassMethod(self, @selector(methodSignatureForSelector:)),
-                                       class_getClassMethod(self, @selector(__t_methodSignatureForSelector:)));
-        method_exchangeImplementations(class_getClassMethod(self, @selector(forwardInvocation:)),
-                                       class_getClassMethod(self, @selector(__t_forwardInvocation:)));
+        __tp_normal_forward_exchange_instance_method(self,
+                                                     @selector(methodSignatureForSelector:),
+                                                     @selector(__t_methodSignatureForSelector:));
+        __tp_normal_forward_exchange_instance_method(self,
+                                                     @selector(forwardInvocation:),
+                                                     @selector(__t_forwardInvocation:));
+        __tp_normal_forward_exchange_class_method(self,
+                                                  @selector(methodSignatureForSelector:),
+                                                  @selector(__t_methodSignatureForSelector:));
+        __tp_normal_forward_exchange_class_method(self,
+                                                  @selector(forwardInvocation:),
+                                                  @selector(__t_forwardInvocation:));
     });
 }
 

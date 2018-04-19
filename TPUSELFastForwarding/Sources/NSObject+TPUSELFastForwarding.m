@@ -9,6 +9,63 @@
 #import "NSObject+TPUSELFastForwarding.h"
 #import <objc/runtime.h>
 
+#pragma mark - Safe Exchange Method
+#pragma mark -
+
+static inline
+void __tp_fast_forward_exchange_instance_method(Class cls, SEL originalSel, SEL swizzledSel) {
+    Method originalMethod = class_getInstanceMethod(cls, originalSel);
+    Method swizzledMethod = class_getInstanceMethod(cls, swizzledSel);
+    
+    // 交换实现进行添加函数
+    BOOL addOriginSELSuccess = class_addMethod(cls,
+                                               originalSel,
+                                               method_getImplementation(swizzledMethod),
+                                               method_getTypeEncoding(swizzledMethod));
+    BOOL addSwizzlSELSuccess = class_addMethod(cls,
+                                               swizzledSel,
+                                               method_getImplementation(originalMethod),
+                                               method_getTypeEncoding(originalMethod));
+    // 全都添加成功，返回
+    if (addOriginSELSuccess && addSwizzlSELSuccess) {
+        return;
+    }
+    // 全都添加失败，已经添加过了方法，交换
+    if (!addOriginSELSuccess && !addSwizzlSELSuccess) {
+        method_exchangeImplementations(originalMethod,
+                                       swizzledMethod);
+        return;
+    }
+    // addOriginSELSuccess 成功，addSwizzlSELSuccess 失败，replace SwizzlSel
+    if (addOriginSELSuccess && !addSwizzlSELSuccess) {
+        class_replaceMethod(cls,
+                            swizzledSel,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+        return;
+    }
+    // addSwizzlSELSuccess 成功，addOriginSELSuccess 失败，replace originSEL
+    if (!addOriginSELSuccess && addSwizzlSELSuccess) {
+        class_replaceMethod(cls,
+                            originalSel,
+                            method_getImplementation(swizzledMethod),
+                            method_getTypeEncoding(swizzledMethod));
+        return;
+    }
+}
+
+static inline
+void __tp_fast_forward_exchange_class_method(Class cls, SEL originalSel, SEL swizzledSel) {
+    __tp_fast_forward_exchange_instance_method(objc_getMetaClass(object_getClassName(cls)),
+                                               originalSel,
+                                               swizzledSel);
+}
+
+
+#pragma mark - Implementation Replace
+#pragma mark -
+
+static inline
 void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 
 @implementation NSObject (TPUSELFastForwarding)
@@ -78,10 +135,12 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        method_exchangeImplementations(class_getInstanceMethod(self, @selector(forwardingTargetForSelector:)),
-                                       class_getInstanceMethod(self, @selector(__t_forwardingTargetForSelector:)));
-        method_exchangeImplementations(class_getClassMethod(self, @selector(forwardingTargetForSelector:)),
-                                       class_getClassMethod(self, @selector(__t_forwardingTargetForSelector:)));
+        __tp_fast_forward_exchange_instance_method(self,
+                                                   @selector(forwardingTargetForSelector:),
+                                                   @selector(__t_forwardingTargetForSelector:));
+        __tp_fast_forward_exchange_class_method(self,
+                                                @selector(forwardingTargetForSelector:),
+                                                @selector(__t_forwardingTargetForSelector:));
     });
 }
 
