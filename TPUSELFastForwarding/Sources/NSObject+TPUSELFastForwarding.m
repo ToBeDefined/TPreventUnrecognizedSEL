@@ -149,6 +149,11 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
         return [self __t_forwardingTargetForSelector:aSelector];
     }
     
+    id target = [self __t_forwardingTargetForSelector:aSelector];
+    if (target) {
+        return target;
+    }
+    
     if ([NSObject isCanFowardingFor:[self class]]) {
         class_addMethod([NSObject getProtectorClass],
                         aSelector,
@@ -171,6 +176,11 @@ void __c_t_resolveLostedMethod(id self, SEL _cmd, ...) {}
 + (id)__t_forwardingTargetForSelector:(SEL)aSelector {
     if ([self respondsToSelector:aSelector]) {
         return [self __t_forwardingTargetForSelector:aSelector];
+    }
+    
+    id target = [self __t_forwardingTargetForSelector:aSelector];
+    if (target) {
+        return target;
     }
     
     if ([NSObject isCanFowardingFor:self]) {
